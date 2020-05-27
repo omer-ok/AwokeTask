@@ -1,0 +1,657 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ddd"
+    android:padding="@dimen/_5sdp"
+
+    >
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp"
+        android:background="#fff"
+        android:elevation="@dimen/_5sdp"
+        app:layout_constraintTop_toBottomOf="@+id/backbtn">
+
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#fff"
+            app:layout_constraintTop_toTopOf="parent"
+            >
+
+
+
+            <ImageView
+                android:id="@+id/thumbNail"
+                android:layout_width="100dp"
+                android:layout_height="140dp"
+                android:scaleType="centerCrop"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginStart="@dimen/_5sdp"
+                app:srcCompat="@drawable/avatar_new"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+
+            <TextView
+                android:id="@+id/DayTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="@dimen/_90sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:fontFamily="@font/montserrat"
+                android:text="Day 1"
+                android:textSize="16dp"
+                />
+            <View
+                android:layout_width="@dimen/_180sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="#E9E9E9"
+                android:layout_height="1dp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/dailyPick"
+                app:layout_constraintTop_toBottomOf="@+id/DayTV"
+                >
+
+            </View>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/locationholder"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:paddingLeft="16dp"
+                android:paddingTop="8dp"
+                android:paddingRight="16dp"
+                android:paddingBottom="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/DayTV">
+
+                <ImageView
+                    android:id="@+id/markerimg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/icon_location"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/addressValue"
+                    android:layout_width="@dimen/_150sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/montserrat"
+                    android:text="@string/TodayActivity_Location"
+                    android:gravity="center_vertical"
+                    android:textSize="10sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/markerimg"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:layout_width="@dimen/_180sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="#E9E9E9"
+                android:layout_height="1dp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/dailyPick"
+                app:layout_constraintTop_toBottomOf="@+id/locationholder"
+                >
+
+            </View>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/calender"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:paddingLeft="16dp"
+                android:paddingTop="8dp"
+                android:paddingRight="16dp"
+                android:paddingBottom="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+
+                app:layout_constraintTop_toBottomOf="@+id/locationholder">
+
+                <ImageView
+                    android:id="@+id/calimg"
+                    android:layout_width="20dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:src="@drawable/icon_calendar"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/dateValue"
+                    android:layout_width="@dimen/_150sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/montserrat"
+                    android:gravity="center_vertical"
+                    android:textSize="10sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/calimg"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="@dimen/_180sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="#E9E9E9"
+                android:layout_height="1dp"
+                android:layout_marginStart="@dimen/_45sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/dailyPick"
+                app:layout_constraintTop_toBottomOf="@+id/calender"
+                >
+
+            </View>
+
+            <RelativeLayout
+                android:id="@+id/counterView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                app:layout_constraintLeft_toRightOf="parent"
+                app:layout_constraintRight_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view">
+
+                <LinearLayout
+                    android:id="@+id/stepsView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    >
+
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp">
+
+                        <ImageView
+                            android:layout_width="@dimen/_20sdp"
+                            android:layout_height="@dimen/_20sdp"
+                            android:layout_centerInParent="true"
+                            app:srcCompat="@drawable/icon_steps" />
+
+
+
+                    </RelativeLayout>
+
+
+                    <TextView
+                        android:id="@+id/stepsValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:maxLines="1"
+                        android:maxLength="6"
+                        android:ellipsize="end"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/montserrat"
+                        android:textSize="@dimen/_10sdp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat"
+                        android:text="(Kcal)"
+                        android:visibility="invisible"
+                        android:layout_below="@+id/calLabel"
+                        android:layout_centerHorizontal="true"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_5sdp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/General_Steps"
+                        android:fontFamily="@font/montserrat"
+                        android:textColor="#514545"
+                        android:textSize="@dimen/_8sdp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/starview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_toRightOf="@+id/stepsView"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:orientation="vertical">
+
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/_20sdp"
+                        android:id="@+id/starItem2"
+                        android:layout_height="@dimen/_20sdp">
+
+                        <ImageView
+                            android:layout_centerInParent="true"
+                            android:layout_width="wrap_content"
+                            app:srcCompat="@drawable/ic_star_black"
+                            android:layout_height="wrap_content" />
+
+
+                    </RelativeLayout>
+
+
+                    <TextView
+                        android:id="@+id/starValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:maxLines="1"
+                        android:maxLength="6"
+                        android:ellipsize="end"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/montserrat"
+                        android:textSize="@dimen/_10sdp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat"
+                        android:text="(Kcal)"
+                        android:visibility="invisible"
+                        android:layout_below="@+id/calLabel"
+                        android:layout_centerHorizontal="true"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_5sdp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/General_Stars"
+                        android:fontFamily="@font/montserrat"
+                        android:textColor="#514545"
+                        android:textSize="@dimen/_8sdp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/caloriesview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_toRightOf="@+id/starview"
+                    android:orientation="vertical">
+
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp">
+
+                        <ImageView
+                            android:layout_centerInParent="true"
+                            android:layout_width="@dimen/_20sdp"
+                            app:srcCompat="@drawable/icon_calories_new"
+                            android:layout_height="@dimen/_20sdp" />
+
+
+                    </RelativeLayout>
+
+
+                    <TextView
+                        android:id="@+id/calValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:maxLines="1"
+                        android:maxLength="6"
+                        android:ellipsize="end"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/montserrat"
+                        android:textSize="@dimen/_10sdp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/CalUnit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat"
+                        android:text=""
+                        android:layout_below="@+id/calLabel"
+                        android:layout_centerHorizontal="true"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_5sdp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/General_Calories"
+                        android:fontFamily="@font/montserrat"
+                        android:textColor="#514545"
+                        android:textSize="@dimen/_8sdp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/distanceview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_toRightOf="@+id/caloriesview"
+                    android:orientation="vertical">
+
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp">
+
+                        <ImageView
+                            android:layout_centerInParent="true"
+                            android:layout_width="@dimen/_20sdp"
+                            app:srcCompat="@drawable/icon_distance"
+                            android:layout_height="@dimen/_20sdp" />
+
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/distanceValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:maxLines="1"
+                        android:maxLength="6"
+                        android:ellipsize="end"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/montserrat"
+                        android:textSize="@dimen/_10sdp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/DisUnit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat"
+                        android:text=""
+                        android:layout_below="@+id/ditanceLabel"
+                        android:layout_centerHorizontal="true"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_5sdp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/General_Distance"
+                        android:fontFamily="@font/montserrat"
+                        android:textColor="#514545"
+                        android:textSize="@dimen/_8sdp" />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/waistview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_toRightOf="@+id/distanceview"
+                    android:orientation="vertical">
+
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp">
+
+                        <ImageView
+                            android:layout_centerInParent="true"
+                            android:layout_width="@dimen/_20sdp"
+                            app:srcCompat="@drawable/icon_waist"
+                            android:layout_height="@dimen/_20sdp" />
+
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/waistValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:maxLines="1"
+                        android:maxLength="6"
+                        android:ellipsize="end"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/montserrat"
+                        android:textSize="@dimen/_10sdp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat"
+                        android:text="(Cm)"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_5sdp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/General_Waist"
+                        android:textColor="#514545"
+                        android:fontFamily="@font/montserrat"
+                        android:textSize="@dimen/_8sdp" />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_toRightOf="@+id/waistview"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp">
+
+                        <ImageView
+                            android:layout_centerInParent="true"
+                            android:layout_width="@dimen/_20sdp"
+                            app:srcCompat="@drawable/ic_weight_scale"
+                            android:layout_height="@dimen/_20sdp" />
+
+                    </RelativeLayout>
+
+
+                    <TextView
+                        android:id="@+id/weightValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:maxLines="1"
+                        android:maxLength="6"
+                        android:ellipsize="end"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/montserrat"
+                        android:textSize="@dimen/_10sdp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat"
+                        android:text="(Kg)"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_5sdp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/General_Weight"
+                        android:fontFamily="@font/montserrat"
+                        android:textColor="#514545"
+                        android:textSize="@dimen/_8sdp" />
+
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                app:layout_constraintEnd_toStartOf="@+id/counterView"
+                app:layout_constraintStart_toEndOf="@+id/counterView"
+                app:layout_constraintTop_toBottomOf="@+id/counterView"
+                >
+
+                <View
+                    android:id="@+id/view1"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:background="#E9E9E9"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    >
+                </View>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/checklistRV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:layout_below="@+id/view1"
+                    >
+                </androidx.recyclerview.widget.RecyclerView>
+
+                <RelativeLayout
+                    android:id="@+id/dayDecView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/checklistRV">
+                    <ImageView
+                        android:id="@+id/dec_ic"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:background="@drawable/ic_edit"
+                        />
+
+                    <TextView
+                        android:id="@+id/dayDescriptionText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minHeight="@dimen/_80sdp"
+                        android:scrollbars = "vertical"
+                        android:textColor="@color/black"
+                        android:hint="Describe your Day"
+                        android:gravity="left"
+                        android:textSize="@dimen/_10sdp"
+                        android:nestedScrollingEnabled="true"
+                        android:background="@drawable/borderline_gray_circle_cornor_white_background"
+                        android:isScrollContainer="true"
+                        android:paddingStart="@dimen/_5sdp"
+                        android:layout_toRightOf="@+id/dec_ic"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:fontFamily="@font/montserrat"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/thumbCheck"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/dayDecView"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:layout_centerHorizontal="true">
+
+                    <TextView
+                        android:id="@+id/dayQuestion"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:textSize="12dp"
+                        android:fontFamily="@font/montserrat"
+                        android:text="Hur var din övergripande dag?"
+                        />
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="12dp"
+                        android:layout_below="@+id/dayQuestion">
+                        <Button
+                            android:id="@+id/thumbUp"
+                            android:layout_width="@dimen/_20sdp"
+                            android:layout_height="@dimen/_20sdp"
+                            android:layout_marginEnd="@dimen/_15sdp"
+                            android:background="@drawable/ic_thumbup"
+                            />
+                        <Button
+                            android:id="@+id/thumbDown"
+                            android:layout_width="@dimen/_20sdp"
+                            android:layout_height="@dimen/_20sdp"
+                            android:layout_marginStart="@dimen/_15sdp"
+                            android:layout_toRightOf="@+id/thumbUp"
+                            android:background="@drawable/ic_thumbdown"/>
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:alpha="0.5"
+                    android:visibility="gone"
+                    android:background="@drawable/item_background_white"/>
+
+            </RelativeLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

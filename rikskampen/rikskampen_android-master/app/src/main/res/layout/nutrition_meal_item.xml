@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toLeftOf="parent"
+        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="parent"
+        android:fillViewport="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:visibility="visible"
+        >
+        <RelativeLayout
+            android:id="@+id/descriptionLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/titleView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/nutrition_img">
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorAccent"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:fontFamily="@font/montserrat"
+                    android:textStyle="bold"
+                    />
+
+            </RelativeLayout>
+            <ImageView
+                android:id="@+id/nutrition_img"
+                android:layout_width="@dimen/_110sdp"
+                android:layout_height="@dimen/_120sdp"
+                android:layout_marginTop="8dp"
+                android:scaleType="centerCrop"
+                android:layout_margin="@dimen/_5sdp"
+                android:src="@drawable/icon_nutrition_empty_img"
+
+                />
+
+            <TextView
+                android:id="@+id/Description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Beskrivning"
+                android:fontFamily="@font/montserrat"
+                android:textSize="@dimen/_13sdp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:visibility="gone"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_toRightOf="@+id/nutrition_img"
+                />
+            <TextView
+                android:id="@+id/descriptionValue"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_110sdp"
+                android:fontFamily="@font/montserrat"
+                android:text="dsadsadsadsad5454451211212121112121212121212121211212121112212121214554545454sadsadsadasdsadsdsdasdsadsadsadsadsaddasdsdadasdasdasdassadasdsdsadasdsadasdasdasddasdasdsadsdsadsadsadsadsadsadsddda"
+                android:textSize="@dimen/_10sdp"
+                android:scrollbars = "vertical"
+                android:textColor="@color/black"
+                android:maxEms="12"
+                android:maxLines="8"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_toRightOf="@+id/nutrition_img"
+                android:layout_below="@+id/titleView"/>
+
+            <Button
+                android:id="@+id/recipeMore"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:text="Mer"
+                android:fontFamily="@font/montserrat"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:textColor="@color/white"
+                android:background="@drawable/button_background"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_below="@+id/descriptionValue"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_below="@+id/descriptionLayout">
+            <!-- <View
+                 android:id="@+id/lineview"
+                 android:layout_width="match_parent"
+                 android:layout_marginTop="@dimen/_8sdp"
+                 android:layout_marginBottom="@dimen/_8sdp"
+                 android:background="@color/black"
+                 android:layout_height="1dp"
+
+                 >
+
+             </View>-->
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                >
+
+                <com.github.mikephil.charting.charts.PieChart
+                    android:layout_marginTop="@dimen/_40sdp"
+                    android:layout_marginBottom="@dimen/_80sdp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:visibility="gone"
+                    android:id="@+id/chartNutritionDetail"
+                    android:layout_width="@dimen/_200sdp"
+                    android:layout_height="@dimen/_200sdp"
+                    />
+
+                <!--  <View
+                      android:id="@+id/viewLine"
+                      android:layout_width="match_parent"
+                      android:layout_marginTop="@dimen/_8sdp"
+                      android:background="@color/black"
+                      android:layout_below="@+id/labelIngrdi"
+                      android:layout_height="1dp"
+                      >
+
+                  </View>-->
+
+                <RelativeLayout
+                    android:id="@+id/labelIngrdi"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:background="#F0F0F0"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/montserrat"
+                        android:maxLines="1"
+                        android:text="@string/NutritionIngredient_Ingredients"
+                        android:textColor="@color/black"
+                        android:textSize="9dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_19sdp"
+                        android:layout_toLeftOf="@+id/fatsLabel"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/montserrat"
+                        android:maxLines="1"
+                        android:text="@string/NutritionIngredient_Quantity"
+                        android:textColor="@color/black"
+                        android:textSize="9dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/fatsLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_19sdp"
+                        android:layout_toLeftOf="@+id/caloriesLabel"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/montserrat"
+                        android:maxLines="1"
+                        android:text="@string/NutritionIngredient_Fats"
+                        android:textColor="@color/black"
+                        android:textSize="9dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/caloriesLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_19sdp"
+                        android:layout_toLeftOf="@+id/protineLabel"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/montserrat"
+                        android:maxLines="1"
+                        android:text="@string/NutritionIngredient_Calories"
+                        android:textColor="@color/black"
+                        android:textSize="9dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/protineLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_19sdp"
+                        android:layout_toLeftOf="@+id/carbsLabel"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/montserrat"
+                        android:maxLines="1"
+                        android:text="@string/NutritionIngredient_Proteins"
+                        android:textColor="@color/black"
+                        android:textSize="9dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/carbsLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginEnd="@dimen/_12sdp"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/montserrat"
+                        android:maxLines="1"
+                        android:text="@string/NutritionIngredient_Carbs"
+                        android:textColor="@color/black"
+                        android:textSize="9dp"
+                        android:textStyle="bold"
+                        />
+
+
+                </RelativeLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:background="@color/black"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/labelIngrdi"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    >
+
+                </View>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/IngrediantsList"
+                    android:layout_marginTop="5dp"
+                    android:layout_below="@+id/labelIngrdi"
+                    android:layout_width="match_parent"
+
+
+                    android:layout_height="@dimen/_150sdp">
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+
+                <Button
+                    android:id="@+id/weeklySummary"
+                    android:layout_width="@dimen/_180sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_centerInParent="true"
+                    android:visibility="gone"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:textColor="@color/white"
+                    android:paddingLeft="@dimen/_15sdp"
+                    android:paddingRight="@dimen/_15sdp"
+                    android:fontFamily="@font/montserrat"
+                    android:textSize="@dimen/_10sdp"
+                    android:text="Veckans matvaror"
+                    android:background="@drawable/button_background"
+                    android:layout_marginTop="@dimen/_30sdp"
+                    android:layout_below="@+id/IngrediantsList"/>
+
+
+
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+        <!--        <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/chart_icon"/>-->
+
+
+        <RelativeLayout
+            android:id="@+id/NoDataView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_370sdp"
+            android:visibility="gone"
+            android:background="@drawable/item_background_white">
+
+            <ImageView
+                android:id="@+id/nodataImg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@drawable/icon_no_meals"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/nodataImg"
+                android:layout_centerHorizontal="true"
+                android:text="Nej Planer Tilldelade"
+                />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

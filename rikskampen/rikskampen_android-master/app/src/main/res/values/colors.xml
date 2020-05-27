@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#DDB958</color>
+    <color name="colorPrimaryDark">#c8a167</color>
+    <color name="colorAccent">#c8a167</color>
+
+
+    <color name="colortabselected">#BB9767</color>
+    <color name="colortabunselected">#FFF</color>
+
+    <color name="colorHomeBgNew">#ddd</color>
+
+    <color name="colorBar">#000000</color>
+
+
+    <color name="shadow">#66000000</color>
+
+
+    <color name="MPD_primaryColor">@color/colortabselected</color>
+    <color name="MPD_primaryColorLight">#C5CAE9</color>
+    <color name="MPD_backGroundColor">#FFF</color>
+    <color name="MPD_pickerItemColorUnSelected">#00FFFFFF</color>
+    <color name="MPD_pickerItemColorSelected">@color/colortabselected</color>
+    <color name="MPD_pickerItemTextColorUnSelected">#444</color>
+    <color name="MPD_pickerItemTextColorSelected">#bbffffff</color>
+    <color name="MPD_pickerSelectedTextColor">#FFF</color>
+
+
+</resources>

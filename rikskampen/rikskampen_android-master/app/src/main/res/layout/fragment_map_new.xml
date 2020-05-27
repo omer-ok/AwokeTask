@@ -1,0 +1,1245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:clickable="true"
+    android:clipToPadding="false"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/headerLyout"
+        android:layout_width="match_parent"
+        android:background="@drawable/app_bar_color"
+        android:layout_height="60dp"
+        tools:ignore="MissingConstraints">
+
+
+
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/logo_actionbar"/>
+
+
+        <RelativeLayout
+            android:id="@+id/chatLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_toRightOf="@+id/logo"
+            >
+
+            <ImageView
+                android:id="@+id/icon"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/icon_message"/>
+
+            <com.nex3z.notificationbadge.NotificationBadge
+                android:id="@+id/chatNotify"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_toRightOf="@id/icon"
+                android:layout_alignTop="@id/icon"
+                android:layout_marginLeft="-16dp"
+                android:layout_marginTop="-8dp"
+                app:nbBackground="@drawable/badge_bg_with_shadow"
+                app:nbMaxTextLength="2"/>
+
+
+        </RelativeLayout>
+
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="@dimen/_70sdp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_alignParentRight="true"
+        android:visibility="gone"
+        android:layout_height="@dimen/_24sdp">
+
+        <ImageView
+            android:id="@+id/foot"
+
+            android:layout_width="@dimen/_29sdp"
+            app:srcCompat="@drawable/ic_steps1"
+            android:layout_height="@dimen/_29sdp" />
+
+
+        <TextView
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:text="0"
+            android:background="@drawable/item_background_white"
+            android:textSize="@dimen/_8sdp"
+            android:gravity="center"
+            android:layout_toRightOf="@+id/foot"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:layout_height="@dimen/_10sdp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/compititionCounterMap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:visibility="gone"
+        android:layout_below="@+id/headerLyout">
+
+        <TextView
+            android:id="@+id/hedaing"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/colorAccent"
+            android:fontFamily="@font/montserrat"
+            android:textSize="@dimen/_12sdp"
+            android:textStyle="bold"
+            android:background="@color/white"
+            android:text="@string/Competition_Start_In"
+            />
+        <Button
+            android:id="@+id/update_package"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:layout_below="@id/hedaing"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:layout_centerHorizontal="true"
+            android:visibility="gone"
+            android:text="Update"
+            android:textColor="@color/white"
+            android:background="@drawable/button_clr"
+            />
+        <RelativeLayout
+            android:id="@+id/timerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/hedaing"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:background="@color/white"
+            >
+
+
+            <RelativeLayout
+                android:id="@+id/DayViewCounter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                >
+
+                <LinearLayout
+                    android:id="@+id/dayView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/dayCounterMap"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/montserrat_extra_bold"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_15sdp"
+                        android:text=""/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat"
+                        android:textSize="@dimen/_8sdp"
+                        android:text="@string/Competition_Time_Ticker_Days"/>
+
+                </LinearLayout>
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/dayView"
+                    android:background="@color/dark_gray"/>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/HourViewCounter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:layout_toRightOf="@+id/DayViewCounter">
+
+                <LinearLayout
+                    android:id="@+id/hourView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:id="@+id/hourCounterMap"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/montserrat_extra_bold"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_15sdp"
+                        android:text=""/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat"
+                        android:textSize="@dimen/_8sdp"
+                        android:text="@string/Competition_Time_Ticker_Hours"/>
+
+                </LinearLayout>
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/hourView"
+                    android:background="@color/dark_gray" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/MiniutesViewCounterMap"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:layout_toRightOf="@+id/HourViewCounter">
+
+                <LinearLayout
+                    android:id="@+id/miniuteView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/miniuteCounterMap"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/montserrat_extra_bold"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_15sdp"
+                        android:text=""/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat"
+                        android:text="@string/Competition_Time_Ticker_Minutes"
+                        android:textSize="@dimen/_8sdp" />
+
+                </LinearLayout>
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/miniuteView"
+                    android:background="@color/dark_gray" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:layout_toRightOf="@+id/MiniutesViewCounterMap">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/secondsCounterMap"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/montserrat_extra_bold"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_15sdp"
+                        android:text=""/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat"
+                        android:textSize="@dimen/_8sdp"
+                        android:text="@string/Competition_Time_Ticker_Seconds"/>
+
+                </LinearLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+    <FrameLayout
+
+        android:id="@+id/mapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/compititionCounterMap"
+        android:layout_marginTop="-2dp"
+        android:layout_marginBottom="@dimen/_80sdp"
+        android:clipToPadding="false"
+        tools:context=".leader.activity.fragments.home.HomeFragment">
+
+
+    </FrameLayout>
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="@dimen/_130sdp"
+        >
+
+        <LinearLayout
+            android:id="@+id/PlayChaseing"
+            android:layout_width="@dimen/_50sdp"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:clickable="true"
+            android:background="@drawable/circke_btn_background"
+            android:layout_height="@dimen/_50sdp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_music_player_play"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:text=" Start"
+                android:textStyle="bold"
+                android:textSize="@dimen/_12sdp"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:background="#4B4B4B"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/PauseChaseing"
+            android:layout_width="@dimen/_60sdp"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:visibility="gone"
+            android:background="@drawable/circke_btn_background"
+            android:layout_height="@dimen/_60sdp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_pause"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:text=" Puase"
+                android:textSize="@dimen/_15sdp"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:background="#4B4B4B"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:id="@+id/StopChaseing"
+            android:layout_width="@dimen/_50sdp"
+            android:orientation="vertical"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:gravity="center"
+            android:visibility="gone"
+            android:background="@drawable/circke_btn_background"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:layout_height="@dimen/_50sdp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_stopicon"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="AVSLUTA"
+                android:textStyle="bold"
+                android:textSize="@dimen/_9sdp"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/FinishChaseing"
+            android:layout_width="@dimen/_50sdp"
+            android:orientation="vertical"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:gravity="center"
+            android:visibility="gone"
+            android:background="@drawable/icon_finsih_black"
+            android:layout_marginRight="@dimen/_10sdp"
+
+            android:layout_height="@dimen/_50sdp">
+
+            <!--<ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_stop1"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:id="@+id/FinishchasingButton"
+                android:layout_width="wrap_content"
+                android:text="Finish"
+                android:textSize="@dimen/_15sdp"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:background="#BB9667"
+                android:layout_height="wrap_content" />-->
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/SaveHome"
+            android:layout_width="@dimen/_120sdp"
+            android:orientation="vertical"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:gravity="center"
+            android:visibility="gone"
+            android:background="@drawable/background_border_btn_save"
+            android:layout_marginRight="@dimen/_10sdp"
+
+            android:layout_height="@dimen/_30sdp">
+
+            <!-- <ImageView
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 app:srcCompat="@drawable/ic_stop1"
+                 android:layout_gravity="center"/>-->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="@string/General_Save"
+                android:textSize="@dimen/_15sdp"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:background="#BB9667"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/CancelChaseing"
+            android:layout_width="@dimen/_60sdp"
+            android:orientation="vertical"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:gravity="center"
+            android:visibility="gone"
+            android:background="@drawable/circke_btn_background"
+            android:layout_marginRight="@dimen/_10sdp"
+
+            android:layout_height="@dimen/_60sdp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_cancel_star"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="Cancel"
+                android:textSize="@dimen/_15sdp"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:background="#4B4B4B"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="@dimen/_60sdp"
+        android:id="@+id/StarValut"
+        android:layout_below="@+id/compititionCounterMap"
+        android:layout_marginLeft="10dp"
+        android:layout_height="@dimen/_60sdp">
+
+        <ImageView
+            android:id="@+id/star"
+            android:layout_centerInParent="true"
+            android:layout_width="@dimen/_55sdp"
+            android:src="@mipmap/star_final"
+            android:layout_height="@dimen/_55sdp" />
+
+
+        <TextView
+            android:id="@+id/starNumber"
+            android:layout_centerInParent="true"
+            android:layout_width="@dimen/_15sdp"
+            android:text="0"
+
+            android:textSize="@dimen/_12sdp"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:layout_height="@dimen/_15sdp" />
+
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="@dimen/_44sdp"
+        android:layout_height="@dimen/_44sdp"
+        android:gravity="center"
+        android:visibility="gone"
+        android:layout_marginLeft="10dp"
+        android:layout_below="@+id/StarValut">
+        <TextView
+            android:id="@+id/stepsCountValue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:gravity="center"
+            android:textColor="#BA9566"
+            android:textSize="@dimen/_16sdp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="steps"
+            android:gravity="center"
+            android:layout_below="@+id/stepsCountValue"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="@dimen/_10sdp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="@dimen/_44sdp"
+        android:visibility="gone"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="10dp"
+        android:layout_height="@dimen/_44sdp">
+
+        <ImageView
+            android:layout_centerInParent="true"
+            android:layout_width="@dimen/_39sdp"
+            app:srcCompat="@drawable/ic_synchronization_arrows"
+            android:layout_height="@dimen/_39sdp" />
+
+
+    </RelativeLayout>
+
+
+
+    <ImageView
+        android:layout_marginLeft="@dimen/_20sdp"
+        android:layout_gravity="center_vertical"
+        android:layout_width="40dp"
+        android:visibility="gone"
+        app:srcCompat="@drawable/ic_cancel"
+        android:layout_height="40dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+
+        android:layout_above="@id/ValueStrip"
+        android:background="@drawable/shadow"/>
+
+    <LinearLayout
+        android:id="@+id/ValueStrip"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:elevation="50dp"
+        android:visibility="visible"
+        android:clipToPadding="false"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/_40sdp"
+        android:background="#F2F1F1"
+        android:gravity="center"
+        android:layout_height="@dimen/_65sdp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:visibility="visible"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="@dimen/_80sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_height="@dimen/_60sdp">
+
+                <ImageView
+                    android:id="@+id/StepIcon"
+                    android:layout_centerHorizontal="true"
+                    android:layout_width="@dimen/_20sdp"
+                    app:srcCompat="@drawable/icon_steps"
+                    android:layout_height="@dimen/_20sdp" />
+
+
+                <TextView
+                    android:id="@+id/StepLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/General_Steps"
+                    android:textColor="@color/black"
+                    android:textSize="13sp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/StepIcon"/>
+
+
+                <TextView
+                    android:id="@+id/StepCounter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textColor="@color/black"
+                    android:textSize="13sp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/StepLabel"/>
+
+
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="@dimen/_80sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_height="@dimen/_60sdp">
+
+                <ImageView
+                    android:id="@+id/CaloriesIcon"
+                    android:layout_centerHorizontal="true"
+                    android:layout_width="@dimen/_15sdp"
+                    app:srcCompat="@drawable/icon_calories"
+                    android:layout_height="@dimen/_20sdp" />
+
+
+                <TextView
+                    android:id="@+id/CaloriesLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/General_Calories"
+                    android:textColor="@color/black"
+                    android:textSize="13sp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/CaloriesIcon"/>
+
+
+                <TextView
+                    android:id="@+id/CaloriesCounter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0.00"
+                    android:textColor="@color/black"
+                    android:textSize="13sp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/CaloriesLabel"/>
+
+
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="@dimen/_80sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_height="@dimen/_60sdp">
+
+                <ImageView
+                    android:id="@+id/DistanceIcon"
+                    android:layout_centerHorizontal="true"
+                    android:layout_width="@dimen/_20sdp"
+                    app:srcCompat="@drawable/ic_distance"
+                    android:layout_height="@dimen/_20sdp" />
+
+
+                <TextView
+                    android:id="@+id/DistancehLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/General_Distance"
+                    android:textColor="@color/black"
+                    android:textSize="13sp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/DistanceIcon"/>
+
+
+                <TextView
+                    android:id="@+id/DistanceCounter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textColor="@color/black"
+                    android:textSize="13sp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/DistancehLabel"/>
+
+
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="@dimen/_80sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_height="@dimen/_60sdp">
+
+                <ImageView
+                    android:id="@+id/StopWatchIcon"
+                    android:layout_centerHorizontal="true"
+                    android:layout_width="@dimen/_20sdp"
+                    app:srcCompat="@drawable/ic_timer"
+                    android:layout_height="@dimen/_20sdp" />
+
+
+                <TextView
+                    android:id="@+id/StopWatchLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/MapModule_Time"
+                    android:textColor="@color/black"
+                    android:textSize="13sp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/StopWatchIcon"/>
+
+
+                <Chronometer
+                    android:id="@+id/StopWatchCounter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="13sp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/StopWatchLabel" />
+
+
+
+            </RelativeLayout>
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/StarStrip"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:elevation="50dp"
+        android:visibility="visible"
+        android:background="#F2F1F1"
+        android:layout_marginBottom="@dimen/_40sdp"
+        android:gravity="center"
+        android:layout_height="@dimen/_65sdp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:visibility="visible"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="@dimen/_45sdp"
+                android:id="@+id/starItem1"
+                android:layout_height="@dimen/_50sdp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="13sp"
+                    android:textColor="@color/black"
+                    android:layout_centerHorizontal="true"
+                    android:layout_above="@+id/star1Button"/>
+
+                <ImageView
+                    android:layout_centerInParent="true"
+                    android:layout_width="@dimen/_25sdp"
+
+                    android:id="@+id/star1Button"
+                    android:visibility="visible"
+                    app:srcCompat="@drawable/ic_star_gray_final"
+                    android:layout_height="@dimen/_25sdp" />
+
+                <ImageView
+                    android:layout_centerInParent="true"
+                    android:layout_width="@dimen/_25sdp"
+                    android:visibility="invisible"
+                    android:id="@+id/star1ButtonGold"
+                    app:srcCompat="@drawable/ic_star_gold_final"
+                    android:layout_height="@dimen/_25sdp" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" 1 KM"
+                    android:textColor="@color/black"
+                    android:textSize="10sp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/star1Button"/>
+
+
+
+                <TextView
+                    android:layout_centerInParent="true"
+                    android:layout_width="@dimen/_16sdp"
+                    android:text="1"
+                    android:textSize="@dimen/_10sdp"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:visibility="visible"
+                    android:textColor="@android:color/white"
+                    android:layout_height="@dimen/_16sdp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="@dimen/_45sdp"
+                android:id="@+id/starItem2"
+                android:layout_height="@dimen/_50sdp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="13sp"
+                    android:textColor="@color/black"
+                    android:layout_centerHorizontal="true"
+                    android:layout_above="@+id/star2Button"/>
+
+
+                <ImageView
+                    android:id="@+id/star2Button"
+                    android:layout_centerInParent="true"
+                    android:layout_width="@dimen/_25sdp"
+                    android:visibility="visible"
+                    app:srcCompat="@drawable/ic_star_gray_final"
+                    android:layout_height="@dimen/_25sdp" />
+
+                <ImageView
+                    android:id="@+id/star2ButtonGold"
+                    android:layout_centerInParent="true"
+                    android:layout_width="@dimen/_25sdp"
+                    android:visibility="invisible"
+                    app:srcCompat="@drawable/ic_star_gold_final"
+                    android:layout_height="@dimen/_25sdp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" 2 KM"
+                    android:textColor="@color/black"
+                    android:textSize="10sp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/star2Button"/>
+
+
+
+                <TextView
+                    android:layout_centerInParent="true"
+                    android:layout_width="@dimen/_16sdp"
+                    android:text="2"
+                    android:textSize="@dimen/_10sdp"
+                    android:gravity="center"
+                    android:visibility="visible"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/white"
+                    android:layout_height="@dimen/_16sdp" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="@dimen/_45sdp"
+                android:id="@+id/starItem3"
+                android:layout_height="@dimen/_50sdp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="13sp"
+                    android:textColor="@color/black"
+                    android:layout_centerHorizontal="true"
+                    android:layout_above="@+id/star3Button"/>
+
+                <ImageView
+                    android:id="@+id/star3Button"
+                    android:layout_centerInParent="true"
+                    android:layout_width="@dimen/_25sdp"
+                    app:srcCompat="@drawable/ic_star_gray_final"
+                    android:layout_height="@dimen/_25sdp" />
+
+                <ImageView
+                    android:id="@+id/star3ButtonGold"
+                    android:layout_centerInParent="true"
+                    android:layout_width="@dimen/_25sdp"
+                    android:visibility="invisible"
+                    app:srcCompat="@drawable/ic_star_gold_final"
+                    android:layout_height="@dimen/_25sdp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" 3 KM"
+                    android:textColor="@color/black"
+                    android:textSize="10sp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/star3Button"/>
+
+
+                <TextView
+                    android:layout_centerInParent="true"
+                    android:layout_width="@dimen/_16sdp"
+                    android:text="3"
+                    android:textSize="@dimen/_10sdp"
+                    android:gravity="center"
+                    android:visibility="visible"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/white"
+                    android:layout_height="@dimen/_16sdp" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="@dimen/_45sdp"
+                android:id="@+id/starItem4"
+                android:layout_height="@dimen/_50sdp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="13sp"
+                    android:textColor="@color/black"
+                    android:layout_centerHorizontal="true"
+                    android:layout_above="@+id/star4Button"/>
+
+                <ImageView
+                    android:id="@+id/star4Button"
+                    android:layout_centerInParent="true"
+                    android:layout_width="@dimen/_25sdp"
+
+                    app:srcCompat="@drawable/ic_star_gray_final"
+                    android:layout_height="@dimen/_25sdp" />
+
+                <ImageView
+                    android:id="@+id/star4ButtonGold"
+                    android:layout_centerInParent="true"
+                    android:layout_width="@dimen/_25sdp"
+                    android:visibility="invisible"
+                    app:srcCompat="@drawable/ic_star_gold_final"
+                    android:layout_height="@dimen/_25sdp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="4 KM"
+                    android:textColor="@color/black"
+                    android:textSize="10sp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/star4Button"/>
+
+
+                <TextView
+                    android:layout_centerInParent="true"
+                    android:layout_width="@dimen/_16sdp"
+                    android:text="4"
+                    android:textSize="@dimen/_10sdp"
+                    android:visibility="visible"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/white"
+                    android:layout_height="@dimen/_16sdp" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="@dimen/_45sdp"
+                android:id="@+id/starItem5"
+                android:layout_height="@dimen/_50sdp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="13sp"
+                    android:textColor="@color/black"
+                    android:layout_centerHorizontal="true"
+                    android:layout_above="@+id/star5Button"/>
+
+                <ImageView
+                    android:id="@+id/star5Button"
+                    android:layout_centerInParent="true"
+                    android:layout_width="@dimen/_25sdp"
+                    app:srcCompat="@drawable/ic_star_gray_final"
+                    android:layout_height="@dimen/_25sdp" />
+
+                <ImageView
+                    android:id="@+id/star5ButtonGold"
+                    android:layout_centerInParent="true"
+                    android:layout_width="@dimen/_25sdp"
+                    android:visibility="invisible"
+                    app:srcCompat="@drawable/ic_star_gold_final"
+                    android:layout_height="@dimen/_25sdp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" 5 KM"
+                    android:textColor="@color/black"
+                    android:textSize="10sp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/star5Button"/>
+
+
+                <TextView
+                    android:layout_centerInParent="true"
+                    android:layout_width="@dimen/_16sdp"
+                    android:text="5"
+                    android:textSize="@dimen/_10sdp"
+                    android:visibility="visible"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/white"
+                    android:layout_height="@dimen/_16sdp" />
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="#F2F1F1"
+                android:orientation="horizontal">
+
+
+                <RelativeLayout
+                    android:layout_width="@dimen/_45sdp"
+                    android:id="@+id/homebtn"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textSize="13sp"
+                        android:textColor="@color/black"
+                        android:layout_centerHorizontal="true"
+                        android:layout_above="@+id/homebtnic"/>
+
+                    <ImageView
+                        android:id="@+id/homebtnic"
+                        android:layout_centerInParent="true"
+                        android:layout_width="@dimen/_25sdp"
+                        app:srcCompat="@drawable/home_un"
+                        android:layout_height="@dimen/_25sdp" />
+
+                    <ImageView
+                        android:id="@+id/homebtnicGold"
+                        android:layout_centerInParent="true"
+                        android:layout_width="@dimen/_25sdp"
+                        android:visibility="invisible"
+                        app:srcCompat="@drawable/home_color"
+                        android:layout_height="@dimen/_25sdp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/MapModule_Home"
+                        android:textColor="@color/black"
+                        android:textSize="10sp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_below="@+id/homebtnic"/>
+
+
+                    <TextView
+                        android:layout_centerInParent="true"
+                        android:layout_width="@dimen/_14sdp"
+                        android:text="5"
+                        android:background="@drawable/item_background_white"
+                        android:textSize="@dimen/_10sdp"
+                        android:visibility="gone"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/black"
+                        android:layout_height="@dimen/_14sdp" />
+
+                </RelativeLayout>
+
+
+
+                <RelativeLayout
+                    android:layout_width="@dimen/_30sdp"
+                    android:id="@+id/homebtnedit"
+                    android:layout_height="@dimen/_50sdp">
+
+
+                    <ImageView
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:id="@+id/homebtneditic"
+
+                        android:layout_width="@dimen/_30sdp"
+                        app:srcCompat="@drawable/settings_un"
+                        android:layout_height="@dimen/_30sdp" />
+
+                    <ImageView
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:id="@+id/homebtnediticGold"
+                        android:visibility="invisible"
+                        android:layout_width="@dimen/_30sdp"
+                        app:srcCompat="@drawable/settings_color"
+                        android:layout_height="@dimen/_30sdp" />
+
+
+                    <TextView
+                        android:layout_centerInParent="true"
+                        android:layout_width="@dimen/_14sdp"
+                        android:text="5"
+                        android:background="@drawable/item_background_white"
+                        android:textSize="@dimen/_10sdp"
+                        android:visibility="gone"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/black"
+                        android:layout_height="@dimen/_14sdp" />
+
+                </RelativeLayout>
+
+
+
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:background="@drawable/item_background_gray_corner"
+        >
+        <View
+            android:layout_width="@dimen/_200sdp"
+            android:layout_height="@dimen/_200sdp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/item_background_white_circle"
+            />
+
+        <ImageView
+            android:id="@+id/clockView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/time"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your Contest in not started"
+            android:layout_below="@+id/clockView"
+            android:layout_centerHorizontal="true"
+            />
+
+    </RelativeLayout>
+
+    <!--  <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:background="@color/blacktrans">
+
+      </RelativeLayout>-->
+
+</RelativeLayout>

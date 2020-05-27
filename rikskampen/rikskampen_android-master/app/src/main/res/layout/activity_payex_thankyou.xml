@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <TextView
+        android:id="@+id/orderNumber"
+        fontPath="fonts/MontserratAlternates-Regular.ttf"
+        android:layout_width="0dp"
+        android:layout_marginTop="@dimen/_18sdp"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_marginStart="@dimen/_32sdp"
+        android:layout_marginEnd="@dimen/_32sdp"
+        android:layout_marginBottom="@dimen/_8sdp"
+        android:ems="10"
+        android:gravity="center"
+        android:textSize="@dimen/_12sdp"
+        android:maxLength="30"
+        android:text="Order Number"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+    <TextView
+        android:id="@+id/refrenceNumber"
+        fontPath="fonts/MontserratAlternates-Regular.ttf"
+        android:layout_width="0dp"
+        android:textSize="@dimen/_12sdp"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginStart="@dimen/_32sdp"
+        android:layout_marginEnd="@dimen/_32sdp"
+        android:layout_marginBottom="@dimen/_8sdp"
+        android:ems="10"
+        android:gravity="center"
+        android:maxLength="30"
+        android:text="Refrence Number"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/orderNumber"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/emailText"
+        fontPath="fonts/MontserratAlternates-Regular.ttf"
+        android:layout_width="0dp"
+        android:textSize="@dimen/_12sdp"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginStart="@dimen/_32sdp"
+        android:layout_marginEnd="@dimen/_32sdp"
+        android:layout_marginBottom="@dimen/_8sdp"
+        android:ems="10"
+        android:gravity="center"
+
+        android:text="We have send the payment recipt at your email id omer_khan20@hotmail.com"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/refrenceNumber"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+    <TextView
+        android:id="@+id/thanks"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Payment Scuessfull Thankyou"
+        android:textSize="@dimen/_30sdp"
+        android:textColor="@color/colorPrimary"
+        android:textAlignment="center"
+        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintRight_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="parent"
+        />
+
+    <TextView
+        fontPath="fonts/MontserratAlternates-Bold.ttf"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginStart="@dimen/_40sdp"
+        android:elevation="5dp"
+        android:layout_marginTop="@dimen/_32sdp"
+        android:layout_marginEnd="@dimen/_40sdp"
+
+        android:background="@drawable/button_background"
+        android:gravity="center"
+        android:text="Next"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/_20sdp"
+        android:textStyle="bold"
+        android:clickable="true"
+        android:onClick="onNextClick"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.48"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/thanks" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

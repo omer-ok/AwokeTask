@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="@color/white"
+        android:padding="10dp"
+        app:layout_constraintRight_toLeftOf="parent"
+        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/ic_congratz"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            app:srcCompat="@drawable/ic_icon_congratulations"
+            android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:id="@+id/starDialog"
+            android:layout_below="@+id/ic_congratz"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:text="@string/MapModule_Congratulations"
+            android:textStyle="bold"
+            android:textSize="@dimen/_15sdp"
+            android:gravity="center"
+            android:background="@drawable/item_background_white"
+
+            />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/starDialog">
+
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:id="@+id/StarValut"
+
+
+                android:layout_marginLeft="10dp"
+                android:layout_height="@dimen/_44sdp">
+
+                <ImageView
+                    android:id="@+id/star"
+                    android:layout_centerInParent="true"
+                    android:layout_width="@dimen/_39sdp"
+                    android:src="@mipmap/star_final"
+                    android:layout_height="@dimen/_39sdp" />
+
+
+                <TextView
+                    android:id="@+id/starNumber"
+                    android:layout_centerInParent="true"
+                    android:layout_width="@dimen/_10sdp"
+                    android:text="1"
+
+                    android:textSize="@dimen/_8sdp"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"
+                    android:layout_height="@dimen/_10sdp" />
+
+                <TextView
+                    android:layout_toLeftOf="@+id/star"
+                    android:layout_width="wrap_content"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_centerVertical="true"
+                    android:text="@string/MapModule_YouGot"
+                    android:background="@drawable/item_background_white"
+                    />
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_toRightOf="@+id/star"
+                    android:layout_centerVertical="true"
+                    android:text="@string/General_Stars"
+                    android:textStyle="bold"
+                    android:background="@drawable/item_background_white"
+                    />
+
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

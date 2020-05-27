@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/_25sdp"
+    android:layout_marginEnd="@dimen/_25sdp"
+    android:layout_marginBottom="@dimen/_10sdp"
+    android:background="@color/transparent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <RelativeLayout
+        android:id="@+id/parentDalioge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/item_background_white"
+
+        app:layout_constraintRight_toLeftOf="parent"
+        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="parent">
+
+        <RelativeLayout
+            android:id="@+id/uperView"
+            android:layout_width="@dimen/_250sdp"
+            android:gravity="center_horizontal"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_toLeftOf="@+id/StarValut"
+
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/MapModule_YouGot"
+                android:fontFamily="@font/montserrat"
+                android:textColor="@color/black"
+                android:layout_marginTop="@dimen/_10sdp"
+
+                />
+
+            <RelativeLayout
+                android:layout_width="@dimen/_44sdp"
+                android:id="@+id/StarValut"
+                android:layout_centerHorizontal="true"
+                android:layout_height="@dimen/_44sdp">
+
+                <ImageView
+                    android:id="@+id/star"
+                    android:layout_centerInParent="true"
+                    android:layout_width="@dimen/_39sdp"
+                    android:src="@mipmap/star_final"
+                    android:layout_height="@dimen/_39sdp" />
+
+
+                <TextView
+                    android:id="@+id/starNumber"
+                    android:layout_centerInParent="true"
+                    android:layout_width="@dimen/_10sdp"
+                    android:text=""
+                    android:fontFamily="@font/montserrat"
+                    android:textSize="@dimen/_8sdp"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"
+                    android:layout_height="@dimen/_10sdp" />
+
+
+
+            </RelativeLayout>
+
+
+
+    </RelativeLayout>
+
+        <View
+            android:layout_width="@dimen/_250sdp"
+            android:layout_above="@+id/starDialog1"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:layout_centerHorizontal="true"
+            android:background="@color/dark_gray"
+            android:layout_height="1dp">
+
+        </View>
+          <TextView
+              android:id="@+id/starDialog1"
+              android:layout_below="@+id/uperView"
+              android:layout_width="@dimen/_250sdp"
+              android:layout_marginTop="@dimen/_5sdp"
+              android:fontFamily="@font/montserrat"
+              android:layout_height="wrap_content"
+              android:textColor="@color/black"
+              android:gravity="center"
+              />
+        <TextView
+            android:id="@+id/starDialog2"
+            android:layout_below="@+id/starDialog1"
+            android:layout_width="@dimen/_250sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:gravity="center"
+
+            />
+
+</RelativeLayout>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:rotation="180"
+        android:elevation="3dp"
+        android:visibility="gone"
+        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintRight_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/parentDalioge"
+        app:srcCompat="@drawable/ic_triangle"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

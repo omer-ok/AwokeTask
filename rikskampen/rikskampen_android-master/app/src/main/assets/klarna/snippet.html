@@ -1,0 +1,52 @@
+<div id="klarna-checkout-container" style="overflow-x: hidden;">
+    <script type="text/javascript">
+    /* <![CDATA[ */
+        (function(w,k,i,d,n,c,l,p){
+            w[k]=w[k]||function(){(w[k].q=w[k].q||[]).push(arguments)};
+            w[k].config={
+                container:w.document.getElementById(i),
+                ORDER_URL:'https://checkout.testdrive.klarna.com/checkout/orders/FZDFH925D9OXLTC9DB5Y2C22IVT',
+                AUTH_HEADER:'KlarnaCheckout AQ8ANkt6BnbhjNTWqcu3',
+                LAYOUT:'desktop',
+                LOCALE:'sv-se',
+                ORDER_STATUS:'checkout_incomplete',
+                MERCHANT_TAC_URI:'https://mage2.pro',
+                MERCHANT_TAC_TITLE:'Mage2.PRO',
+                MERCHANT_NAME:'Mage2.PRO',
+                MERCHANT_COLOR:'#FF9900',
+                GUI_OPTIONS:[],
+                ALLOW_SEPARATE_SHIPPING_ADDRESS:
+                false,
+                PURCHASE_COUNTRY:'swe',
+                PURCHASE_CURRENCY:'sek',
+                NATIONAL_IDENTIFICATION_NUMBER_MANDATORY:
+                false,
+                ANALYTICS:'UA-36053137-1',
+                TESTDRIVE:true,
+                PHONE_MANDATORY:false,
+                PACKSTATION_ENABLED:false,
+                BOOTSTRAP_SRC:'https://checkout.testdrive.klarna.com/170119-2cfc9fd/checkout.bootstrap.js',
+                PREFILLED: false
+            };
+            n=d.createElement('script');
+            c=d.getElementById(i);
+            n.async=!0;
+            n.src=w[k].config.BOOTSTRAP_SRC;
+            c.appendChild(n);
+            try{
+                p = w[k].config.BOOTSTRAP_SRC.split('/');
+                p = p.slice(0, p.length - 1);
+                l = p.join('/') +
+                    '/api/_t/v1/snippet/load?order_url=' +
+                    w.encodeURIComponent(w[k].config.ORDER_URL) + '&order_status=' +
+                    w.encodeURIComponent(w[k].config.ORDER_STATUS) + '&timestamp=' +
+                    (new Date).getTime();
+                ((w.Image && (new w.Image))||(d.createElement&&d.createElement('img'))||{}).src=l;
+            }catch(e){}
+        })(this,'_klarnaCheckout','klarna-checkout-container',document);
+    /* ]]> */
+    </script>
+    <noscript>
+        Please <a href="http://enable-javascript.com">enable JavaScript</a>.
+    </noscript>
+</div>

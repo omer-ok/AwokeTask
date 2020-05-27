@@ -1,0 +1,1000 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@android:color/white"
+    tools:context="com.kampen.riksSe.leader.activity.fragments.WPlans.SelectPlansActivity">
+
+
+    <!--<ImageView
+        android:id="@+id/imageView"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+
+        android:layout_marginEnd="8dp"
+
+
+        android:layout_marginRight="8dp"
+        android:src="@drawable/ic_splash"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />-->
+
+
+
+
+
+
+    <ScrollView
+        android:scrollbars="none"
+        android:layout_width="match_parent"
+
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        android:layout_marginBottom="20dp"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_margin="10dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_marginLeft="10dp"
+            android:clickable="true"
+            android:layout_marginBottom="4dp"
+            android:onClick="onPlanOneClick"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/plan_item_1_bg"
+            android:elevation="5dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    >
+
+                    <ImageView
+                        android:id="@+id/packaegImgJun"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/junior"
+                        android:scaleType="fitXY"
+                        />
+                    <TextView
+                        android:id="@+id/priceJun"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="10dp"
+                        android:background="@drawable/plan_item_textview_rd"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="VINN\n 25000\nKR"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="14dp" />
+                    <TextView
+                        android:id="@+id/AgeJun"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:text="13 - 18\nAR"
+                        android:padding="10dp"
+                        android:gravity="center"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_centerHorizontal="true"
+                        android:textSize="14dp"
+                        android:textColor="@color/colorPrimary"
+                        android:background="@drawable/plan_item_textview_rd"/>
+
+
+
+                </RelativeLayout>
+
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_marginLeft="10dp"
+            android:clickable="true"
+            android:layout_marginBottom="9dp"
+            android:onClick="onPlanOneClick"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/plan_item_1_bg"
+            android:elevation="5dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+
+            <!--<TextView
+                android:id="@+id/PriceJun"
+                android:layout_width="wrap_content"
+                android:text="1st prize 25000 kr."
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:layout_height="wrap_content" />-->
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/TitleJun"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Junior"
+                    fontPath="fonts/georgia_bold.ttf"
+                    android:textColor="@android:color/black"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:text="Ga med idag!"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:background="@drawable/plan_txt_bg"
+                    android:textColor="@android:color/black"
+                    android:textSize="15dp" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/paymentValueJun1"
+                        fontPath="fonts/MontserratAlternates-Bold.ttf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:text="2495 kr"
+                        android:textColor="@android:color/black"
+                        android:textSize="15dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/paymentDesJun1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="110 Kr/ 12 MÅN"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@android:color/black"
+                        android:textSize="15dp" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+
+                        android:text="SOLO"
+                        android:textColor="@android:color/black"
+                        android:textSize="15dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/paymentValueJun2"
+                        fontPath="fonts/MontserratAlternates-Bold.ttf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:text="3495 kr"
+                        android:textColor="@android:color/black"
+                        android:textSize="15dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/paymentDesJun2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="155 Kr/ 12 MÅN / PERS"
+                        android:textColor="@android:color/black"
+                        android:textSize="15dp" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+
+                        android:text="DUO"
+                        android:textColor="@android:color/black"
+                        android:textSize="15dp" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp"
+            android:background="@android:color/darker_gray"
+            android:layout_height="1dp"></View>
+
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_marginLeft="10dp"
+            android:clickable="true"
+            android:layout_marginBottom="4dp"
+            android:onClick="onPlanOneClick"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/plan_item_1_bg"
+            android:elevation="5dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    >
+
+
+                    <ImageView
+                        android:id="@+id/packaegImgVux"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/vixen"
+                        android:scaleType="fitXY"
+                        />
+
+                    <TextView
+                        android:id="@+id/priceVux"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="10dp"
+                        android:background="@drawable/plan_item_textview_rd"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="VINN\n 50000\nKR"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="14dp" />
+                    <TextView
+                        android:id="@+id/AgeVux"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:text="18 - 65\nAR"
+                        android:padding="10dp"
+                        android:gravity="center"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_centerHorizontal="true"
+                        android:textSize="14dp"
+                        android:textColor="@color/colorPrimary"
+                        android:background="@drawable/plan_item_textview_rd"/>
+
+
+                </RelativeLayout>
+
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:clickable="true"
+            android:onClick="onPlanTwoClick"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="9dp"
+            android:elevation="5dp"
+            android:background="@drawable/plan_item_2_bg"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_height="130dp">
+
+  <!--          <TextView
+                android:layout_width="wrap_content"
+                android:text="1st prize 50000 kr."
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:layout_height="wrap_content" />-->
+
+
+            <LinearLayout
+                android:layout_width="320dp"
+
+                android:gravity="center"
+
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+
+
+                <TextView
+                    android:id="@+id/TitleVux"
+                    android:layout_width="wrap_content"
+                    android:text="Vuxen"
+                    android:textSize="20dp"
+                    android:textColor="@android:color/black"
+                    fontPath="fonts/MontserratAlternates-Bold.ttf"
+                    android:textStyle="bold"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:text="Ga med idag!"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:background="@drawable/plan_txt_bg"
+                    android:textColor="@android:color/black"
+                    android:textSize="15dp" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/paymentValueVux1"
+                        android:layout_width="wrap_content"
+                        android:text="6995 kr"
+
+                        android:textSize="15dp"
+                        android:textColor="@android:color/black"
+                        fontPath="fonts/MontserratAlternates-Bold.ttf"
+                        android:textStyle="bold"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/paymentDesVux1"
+                        android:layout_marginLeft="10dp"
+                        android:layout_width="wrap_content"
+                        android:text="295 Kr/ 12 MÅN"
+
+                        android:textSize="15dp"
+                        android:textColor="@android:color/black"
+                        android:layout_height="wrap_content" />
+
+
+                    <TextView
+                        android:layout_marginLeft="10dp"
+                        android:layout_width="wrap_content"
+                        android:text="SOLO"
+
+                        android:textSize="15dp"
+                        android:textColor="@android:color/black"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/paymentValueVux2"
+                        android:layout_width="wrap_content"
+                        android:text="8995 kr"
+
+                        android:textSize="14dp"
+                        android:textColor="@android:color/black"
+                        fontPath="fonts/MontserratAlternates-Bold.ttf"
+                        android:textStyle="bold"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/paymentDesVux2"
+                        android:layout_marginLeft="10dp"
+                        android:layout_width="wrap_content"
+                        android:text="195 Kr/ 12 MÅN / PERS"
+
+                        android:textSize="15dp"
+                        android:textColor="@android:color/black"
+                        android:layout_height="wrap_content" />
+
+
+                    <TextView
+                        android:layout_marginLeft="10dp"
+                        android:layout_width="wrap_content"
+                        android:text="DUO"
+
+                        android:textSize="15dp"
+                        android:textColor="@android:color/black"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp"
+            android:background="@android:color/darker_gray"
+            android:layout_height="1dp"></View>
+
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_marginLeft="10dp"
+            android:clickable="true"
+            android:layout_marginBottom="4dp"
+            android:onClick="onPlanOneClick"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/plan_item_1_bg"
+            android:elevation="5dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    >
+
+                    <ImageView
+                        android:id="@+id/packaegImgSenior"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/senior"
+                        android:scaleType="fitXY"/>
+
+
+                    <TextView
+                        android:id="@+id/priceSenior"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="10dp"
+                        android:background="@drawable/plan_item_textview_rd"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="VINN\n 50.000\nKR"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="14dp" />
+                    <TextView
+                        android:id="@+id/AgeSenior"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:text="65+\nAR"
+                        android:padding="10dp"
+                        android:gravity="center"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_centerHorizontal="true"
+                        android:textSize="14dp"
+                        android:textColor="@color/colorPrimary"
+                        android:background="@drawable/plan_item_textview_rd"/>
+
+
+
+                </RelativeLayout>
+
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:elevation="5dp"
+            android:clickable="true"
+            android:onClick="onPlanThreeClick"
+            android:background="@drawable/plan_item_3_bg"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="9dp"
+            android:paddingRight="10dp"
+
+            android:layout_height="130dp">
+
+
+        <!--    <TextView
+                android:layout_width="wrap_content"
+                android:text="1st prize 50000 kr."
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:layout_height="wrap_content" />-->
+
+
+            <LinearLayout
+                android:layout_width="320dp"
+
+                android:gravity="center"
+
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+
+
+                <TextView
+                    android:id="@+id/TitleSenior"
+                    android:layout_width="wrap_content"
+                    android:text="Senior"
+                    android:textSize="20dp"
+                    android:textColor="@android:color/black"
+                    fontPath="fonts/MontserratAlternates-Bold.ttf"
+                    android:textStyle="bold"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:text="Ga med idag!"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:background="@drawable/plan_txt_bg"
+                    android:textColor="@android:color/black"
+                    android:textSize="15dp" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/paymentValueSen1"
+                        android:layout_width="wrap_content"
+                        android:text="5995 kr"
+
+                        android:textSize="15dp"
+                        android:textColor="@android:color/black"
+                        fontPath="fonts/MontserratAlternates-Bold.ttf"
+                        android:textStyle="bold"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/paymentDesSenior1"
+                        android:layout_width="wrap_content"
+                        android:text="295 Kr/ 12 MÅN"
+                         android:layout_marginLeft="10dp"
+                        android:textSize="15dp"
+                        android:textColor="@android:color/black"
+                        android:layout_height="wrap_content" />
+
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:text="SOLO"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="15dp"
+                        android:textColor="@android:color/black"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/paymentValueSun2"
+                        android:layout_width="wrap_content"
+                        android:text="7995 kr"
+
+                        android:textSize="15dp"
+                        android:textColor="@android:color/black"
+                        fontPath="fonts/MontserratAlternates-Bold.ttf"
+                        android:textStyle="bold"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/paymentDesSenior2"
+                        android:layout_marginLeft="10dp"
+                        android:layout_width="wrap_content"
+                        android:text="195 Kr/ 12 MÅN / PERS"
+
+                        android:textSize="15dp"
+                        android:textColor="@android:color/black"
+                        android:layout_height="wrap_content" />
+
+
+                    <TextView
+                        android:layout_marginLeft="10dp"
+                        android:layout_width="wrap_content"
+                        android:text="DUO"
+
+                        android:textSize="15dp"
+                        android:textColor="@android:color/black"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp"
+            android:background="@android:color/darker_gray"
+            android:layout_height="1dp"></View>
+
+
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_marginLeft="10dp"
+            android:clickable="true"
+            android:layout_marginBottom="4dp"
+            android:onClick="onPlanOneClick"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/plan_item_1_bg"
+            android:elevation="5dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    >
+
+                    <ImageView
+                        android:id="@+id/packaegImgVeteran"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/premium"
+                        android:scaleType="fitXY"
+                        />
+                    <TextView
+                        android:id="@+id/priceVeteran"
+                        android:layout_width="75dp"
+                        android:layout_height="75dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="10dp"
+                        android:background="@drawable/plan_item_textview_rd"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="VINN\n 100,000\nKR"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="14dp" />
+
+                    <TextView
+                        android:id="@+id/AgeVeteran"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:text="13+\nAR"
+                        android:padding="10dp"
+                        android:gravity="center"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_centerHorizontal="true"
+                        android:textSize="14dp"
+                        android:textColor="@color/colorPrimary"
+                        android:background="@drawable/plan_item_textview_rd"/>
+
+
+
+                </RelativeLayout>
+
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:elevation="5dp"
+            android:clickable="true"
+            android:onClick="onPlanFourClick"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="9dp"
+            android:background="@drawable/plan_item_4_bg"
+            android:paddingRight="10dp"
+            android:layout_height="130dp">
+
+
+            <!--<TextView
+                android:layout_width="wrap_content"
+                android:text="1st prize 50000 kr."
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:layout_height="wrap_content" />-->
+
+
+            <LinearLayout
+                android:layout_width="320dp"
+
+                android:gravity="center"
+
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+
+
+                <TextView
+                    android:id="@+id/TitlePremium"
+                    android:layout_width="wrap_content"
+                    android:text="PREMIUM"
+                    android:textSize="20dp"
+                    android:textColor="@android:color/black"
+                    fontPath="fonts/MontserratAlternates-Bold.ttf"
+                    android:textStyle="bold"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:text="Ga med idag!"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:background="@drawable/plan_txt_bg"
+                    android:textColor="@android:color/black"
+                    android:textSize="15dp"/>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/paymentValueVet1"
+                        android:layout_width="wrap_content"
+                        android:text="7995 kr"
+                        android:textSize="15dp"
+                        android:textColor="@android:color/black"
+                        fontPath="fonts/MontserratAlternates-Bold.ttf"
+                        android:textStyle="bold"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/paymentDesPremium1"
+                        android:layout_marginLeft="10dp"
+                        android:layout_width="wrap_content"
+                        android:text="336 Kr/ 12 MÅN"
+                        android:textSize="15dp"
+                        android:textColor="@android:color/black"
+                        android:layout_height="wrap_content" />
+
+
+                    <TextView
+                        android:layout_marginLeft="10dp"
+                        android:layout_width="wrap_content"
+                        android:text="SOLO"
+
+                        android:textSize="15dp"
+                        android:textColor="@android:color/black"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/paymentValueVet2"
+                        android:layout_width="wrap_content"
+                        android:text="9995 kr"
+
+                        android:textSize="15dp"
+                        android:textColor="@android:color/black"
+                        fontPath="fonts/MontserratAlternates-Bold.ttf"
+                        android:textStyle="bold"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/paymentDesPremium2"
+                        android:layout_marginLeft="10dp"
+                        android:layout_width="wrap_content"
+                        android:text="215 Kr/ 12 MÅN / PERS"
+
+                        android:textSize="15dp"
+                        android:textColor="@android:color/black"
+                        android:layout_height="wrap_content" />
+
+
+                    <TextView
+                        android:layout_marginLeft="10dp"
+                        android:layout_width="wrap_content"
+                        android:text="DUO"
+
+                        android:textSize="15dp"
+                        android:textColor="@android:color/black"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp"
+            android:background="@android:color/darker_gray"
+            android:layout_height="1dp"></View>
+
+
+
+
+
+
+
+    </LinearLayout>
+
+
+    </ScrollView>
+
+</LinearLayout>

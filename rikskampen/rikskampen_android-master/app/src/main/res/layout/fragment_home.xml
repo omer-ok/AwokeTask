@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorHomeBgNew">
+    <RelativeLayout
+        android:id="@+id/headerLyout"
+        android:layout_width="match_parent"
+        android:background="@drawable/app_bar_color"
+        android:layout_height="60dp"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/logo_actionbar"/>
+
+
+        <RelativeLayout
+            android:id="@+id/chatLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_toRightOf="@+id/logo"
+            >
+
+
+            <ImageView
+                android:id="@+id/icon"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/icon_message"/>
+
+            <com.nex3z.notificationbadge.NotificationBadge
+                android:id="@+id/chatNotify"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_toRightOf="@id/icon"
+                android:layout_alignTop="@id/icon"
+                android:layout_marginLeft="-16dp"
+                android:layout_marginTop="-8dp"
+                app:nbBackground="@drawable/badge_bg_with_shadow"
+                app:nbMaxTextLength="2"/>
+
+
+        </RelativeLayout>
+
+
+
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/compititionCounter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:visibility="gone"
+        android:layout_below="@+id/headerLyout">
+
+        <TextView
+            android:id="@+id/hedaing"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:background="@color/white"
+            android:textColor="@color/colorAccent"
+            android:fontFamily="@font/montserrat"
+            android:textSize="@dimen/_12sdp"
+            android:textStyle="bold"
+            android:text="@string/Competition_Start_In"
+            />
+
+        <Button
+            android:id="@+id/update_package"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:layout_below="@id/hedaing"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:layout_centerHorizontal="true"
+            android:visibility="gone"
+            android:text="Update"
+            android:textColor="@color/white"
+            android:background="@drawable/button_clr"
+            />
+
+        <RelativeLayout
+            android:id="@+id/timerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/hedaing"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:background="@color/white"
+            >
+
+
+            <RelativeLayout
+                android:id="@+id/DayViewCounter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:background="@color/white"
+                >
+
+                <LinearLayout
+                    android:id="@+id/dayView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/dayCounter"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/_15sdp"
+                        android:fontFamily="@font/montserrat_extra_bold"
+                        android:textColor="@color/black"
+                        android:text=""/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat"
+                        android:textSize="@dimen/_8sdp"
+                        android:text="@string/Competition_Time_Ticker_Days"/>
+
+                </LinearLayout>
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/dayView"
+                    android:background="@color/dark_gray"/>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/HourViewCounter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:layout_toRightOf="@+id/DayViewCounter">
+
+                <LinearLayout
+                    android:id="@+id/hourView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/hourCounter"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/_15sdp"
+                        android:fontFamily="@font/montserrat_extra_bold"
+                        android:textColor="@color/black"
+                        android:text=""/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat"
+                        android:textSize="@dimen/_8sdp"
+
+                        android:text="@string/Competition_Time_Ticker_Hours"/>
+
+                </LinearLayout>
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/hourView"
+                    android:background="@color/dark_gray" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/MiniutesViewCounter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:layout_toRightOf="@+id/HourViewCounter">
+
+                <LinearLayout
+                    android:id="@+id/miniuteView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/miniuteCounter"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/montserrat_extra_bold"
+                        android:textSize="@dimen/_15sdp"
+                        android:textColor="@color/black"
+                        android:text=""/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat"
+                        android:text="@string/Competition_Time_Ticker_Minutes"
+                        android:textSize="@dimen/_8sdp" />
+
+                </LinearLayout>
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/miniuteView"
+                    android:background="@color/dark_gray" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:layout_toRightOf="@+id/MiniutesViewCounter">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/secondsCounter"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_15sdp"
+                        android:fontFamily="@font/montserrat_extra_bold"
+                        android:text=""/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat"
+                        android:textSize="@dimen/_8sdp"
+                        android:text="@string/Competition_Time_Ticker_Seconds"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/tabsContainer1"
+        android:layout_centerHorizontal="true"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_below="@+id/compititionCounter"
+        android:gravity="center_horizontal"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:id="@+id/tabsContainer12"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/_1sdp"
+            android:background="@drawable/tab_view_layout_borderline"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:gravity="center_vertical"
+            android:layout_height="@dimen/_32sdp">
+
+
+
+
+
+
+
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/tabsContainer"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="visible"
+            android:padding="@dimen/_1sdp"
+            android:background="@drawable/tab_view_layout_borderline"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:gravity="center_vertical"
+            android:layout_height="@dimen/_32sdp">
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/tabLeft1"
+                    android:layout_width="@dimen/_120sdp"
+                    android:layout_height="@dimen/_32sdp"
+                    android:gravity="center"
+                    android:text="@string/Home_Activity"
+                    android:fontFamily="@font/montserrat"
+                    android:textColor="@color/colortabselected"
+                    android:background="@drawable/tab_unselected_rounded_courners"
+                    android:textSize="@dimen/_12sdp"
+                    android:textStyle="bold" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/tabLeftViewHome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/tabLeft"
+                    android:layout_width="@dimen/_120sdp"
+                    android:layout_height="@dimen/_32sdp"
+                    android:gravity="center"
+                    android:text="@string/Home_Activity"
+                    android:fontFamily="@font/montserrat"
+                    android:textColor="@android:color/white"
+                    android:background="@drawable/tab_selected_rounded_courners"
+                    android:textSize="@dimen/_12sdp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/tabLeftViewHome">
+                <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/tabRight1"
+                    android:layout_width="@dimen/_120sdp"
+                    android:gravity="center"
+                    android:layout_height="@dimen/_32sdp"
+                    android:text="@string/Home_HealthAndPrograms"
+                    android:fontFamily="@font/montserrat"
+                    android:textColor="@color/colortabselected"
+                    android:background="@drawable/tab_unselected_rounded_courners"
+                    android:textSize="@dimen/_12sdp"
+                    android:textStyle="bold" />
+
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/tabRightViewHome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/tabLeftViewHome">
+
+
+                <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/tabRight"
+                    android:layout_width="@dimen/_120sdp"
+                    android:gravity="center"
+                    android:layout_height="@dimen/_32sdp"
+                    android:text="@string/Home_HealthAndPrograms"
+                    android:fontFamily="@font/montserrat"
+                    android:textColor="@color/colortabselected"
+                    android:background="@drawable/tab_unselected_rounded_courners"
+
+                    android:textSize="@dimen/_12sdp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+
+
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tabsContainer1"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:visibility="visible"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    </FrameLayout>
+
+    <!--<android.support.design.widget.TabLayout
+
+        android:id="@+id/tab_layout"
+        android:visibility="gone"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:elevation="3dp"
+        app:tabIndicator="@null"
+        android:layout_below="@+id/tabsContainer1"
+        app:tabIndicatorColor="@android:color/holo_blue_dark"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        />
+
+
+
+<!-    <android.support.v4.view.ViewPager
+
+       android:layout_below="@+id/tabsContainer1"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/viewpager"
+        android:visibility="visible"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />-->
+
+</RelativeLayout>

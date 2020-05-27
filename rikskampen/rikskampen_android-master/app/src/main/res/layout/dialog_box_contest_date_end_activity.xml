@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:orientation="vertical"
+android:background="@drawable/item_background_white_circle"
+    >
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/_10sdp"
+    >
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:visibility="gone"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:textSize="@dimen/_12sdp"
+        android:text="Börjar snart!"
+        />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:layout_below="@id/textView"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_12sdp"
+        android:textAlignment="center"
+        android:text="@string/General_PleaseUpdatePackage"
+        />
+
+    <EditText
+        android:id="@+id/editTextDialogUserInput"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_30sdp"
+        android:gravity="center"
+        android:inputType="numberDecimal"
+        android:hint="Vikt 100 KG"
+        android:visibility="gone"
+        android:maxLines="1"
+        android:maxLength="6"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:layout_below="@id/textView1"
+        android:background="@drawable/light_grey_border_tint"/>
+
+    <EditText
+        android:id="@+id/editTextDialogUserInput1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_30sdp"
+        android:gravity="center"
+        android:inputType="number"
+        android:hint="Midjemått 50 CM"
+        android:visibility="gone"
+        android:maxLines="1"
+        android:maxLength="3"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:layout_below="@id/editTextDialogUserInput"
+        android:background="@drawable/light_grey_border_tint"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:visibility="gone"
+        android:layout_below="@id/editTextDialogUserInput1">
+
+        <Button
+            android:id="@+id/okBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_30sdp"
+            android:text="@string/General_UpdatePackage"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:padding="@dimen/_5sdp"
+            android:textSize="@dimen/_10sdp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/button_clr"
+            />
+    </RelativeLayout>
+</RelativeLayout>
+
+</RelativeLayout>

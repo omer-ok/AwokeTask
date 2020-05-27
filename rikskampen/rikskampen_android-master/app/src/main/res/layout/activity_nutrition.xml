@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="#f2f2f2"
+    android:layout_height="match_parent"
+    >
+
+
+    <RelativeLayout
+        android:id="@+id/headerLyout"
+        android:layout_width="match_parent"
+        android:layout_marginTop="0dp"
+        android:background="@drawable/app_bar_color"
+        android:layout_height="40dp">
+
+        <ImageView
+            android:id="@+id/backbtn"
+            android:layout_width="23dp"
+            android:layout_height="39dp"
+            android:onClick="onBackClick"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:src="@drawable/icon_back_arrow_white"
+            />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/mealtitle"
+                android:layout_width="wrap_content"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:text="Meal"
+                android:textColor="@color/white"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:textSize="15dp"
+                android:layout_marginLeft="10dp"
+                android:text="18-12-2018"
+                android:visibility="gone"
+                android:textColor="@color/white"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/Ingredients"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="Sorry No Ingredients Assign"
+        android:textSize="@dimen/_30sdp"
+        android:textColor="@color/colorPrimary"
+        android:textAlignment="center"
+
+        android:background="@drawable/item_background_white"
+        android:visibility="gone"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_vertical"
+        android:layout_gravity="center_horizontal"
+
+        />
+    <RelativeLayout
+        android:id="@+id/mapLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/topLayout"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+
+        android:background="@drawable/item_background_white"
+        android:elevation="3dp">
+
+
+        <TextView
+            android:id="@+id/recipename"
+            android:layout_centerInParent="true"
+            android:text="User Location"
+            android:gravity="center"
+            android:padding="@dimen/_5sdp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/montserrat"
+            android:textSize="@dimen/_10sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:paddingRight="10dp"
+        android:layout_margin="10dp"
+        android:elevation="@dimen/_5sdp"
+        android:background="@drawable/item_background_white"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:id="@+id/nutritionDetailRV"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:visibility="visible"
+        android:layout_height="260dp">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:visibility="visible"
+        android:orientation="vertical"
+        android:elevation="@dimen/_5sdp"
+        android:padding="@dimen/_10sdp"
+        android:background="@drawable/item_background_white"
+        android:layout_height="match_parent">
+
+
+        <com.github.mikephil.charting.charts.PieChart
+            android:layout_marginTop="@dimen/_40sdp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+
+            android:id="@+id/chartNutritionDetail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/seekBar1" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="65dp"
+            android:clickable="true"
+            android:onClick="onRecipeClick"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+
+            >
+
+
+
+
+            <TextView
+                android:layout_width="210dp"
+                android:layout_height="50dp"
+                android:text="Recipe Details"
+                android:gravity="center"
+                android:layout_centerHorizontal="true"
+                android:textColor="@android:color/white"
+                android:background="@drawable/button_background"
+                android:textSize="18dp" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

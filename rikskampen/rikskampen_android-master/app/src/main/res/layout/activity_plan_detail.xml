@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    android:gravity="center_horizontal"
+    android:layout_height="match_parent"
+    >
+
+
+
+   <!-- <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+
+        android:layout_marginEnd="8dp"
+
+
+        android:layout_marginRight="8dp"
+        android:src="@drawable/ic_splash"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />-->
+
+
+    <TextView
+        android:elevation="5dp"
+        android:layout_marginTop="5dp"
+        android:textSize="20dp"
+        android:layout_width="wrap_content"
+
+        android:text=" Select your plan "
+        android:layout_height="30dp" />
+
+
+
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:clickable="true"
+        android:layout_marginBottom="4dp"
+        android:onClick="onPlanOneClick"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/plan_item_1_bg"
+        android:elevation="5dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+
+                <ImageView
+                    android:id="@+id/packaegImg"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/premium"
+                    android:scaleType="fitXY"
+                    />
+
+                <TextView
+                    android:id="@+id/price"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="10dp"
+                    android:background="@drawable/plan_item_textview_rd"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="VINN\n 25000\nKR"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="14dp" />
+                <TextView
+                    android:id="@+id/Age"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:text="13 - 18\nAR"
+                    android:padding="10dp"
+                    android:gravity="center"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_centerHorizontal="true"
+                    android:textSize="14dp"
+                    android:textColor="@color/colorPrimary"
+                    android:background="@drawable/plan_item_textview_rd"/>
+
+
+
+
+            </RelativeLayout>
+
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="0dp"
+        android:id="@+id/containerLayout"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="9dp"
+        android:background="@drawable/plan_item_1_bg"
+        android:elevation="5dp"
+        android:gravity="center"
+
+
+        android:orientation="vertical">
+
+    <!--    <TextView
+            android:id="@+id/prizeTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1st prize 25000 kr."
+            android:textColor="@android:color/white"
+            android:textSize="18dp"
+            android:layout_marginBottom="10dp"
+            android:textStyle="bold" />-->
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+
+            android:gravity="center"
+            android:orientation="vertical">
+
+
+            <TextView
+
+                android:id="@+id/planType"
+                fontPath="fonts/georgia_bold.ttf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Junior"
+                android:textColor="@android:color/white"
+                android:textSize="24dp"
+                android:textStyle="bold" />
+
+            <TextView
+
+                android:id="@+id/planRange"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="13-16 yrs"
+                android:textColor="@android:color/white"
+                android:textSize="18dp" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+
+
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/top"
+                    android:checked="true"
+                    android:layout_width="wrap_content"
+                    android:background="#20ffffff"
+                    android:text="1"
+                    android:textColor="#20ffffff"
+                    android:layout_height="wrap_content" />
+
+                <RadioButton
+                    android:id="@+id/down"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:background="#20ffffff"
+                    android:text="0"
+                    android:textColor="#20ffffff"
+                    android:layout_height="wrap_content" />
+
+            </RadioGroup>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:clickable="true"
+                    android:onClick="onTopClick"
+
+                    fontPath="fonts/MontserratAlternates-Bold.ttf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/planSinglePrice"
+                    android:text="2495 kr 110/month Single"
+                    android:textColor="@android:color/white"
+                    android:textSize="17dp"
+                    android:textStyle="bold" />
+
+
+                <TextView
+                    android:clickable="true"
+
+                    android:onClick="onBottomClick"
+                    fontPath="fonts/MontserratAlternates-Bold.ttf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
+                    android:id="@+id/planDoublePrice"
+                    android:text="3495 kr 155/month Double"
+                    android:textColor="@android:color/white"
+                    android:textSize="17dp"
+                    android:textStyle="bold" />
+
+
+
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="15dp"
+        android:onClick="onNextClick"
+        android:gravity="center_vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_email"
+        android:layout_height="30dp">
+
+
+
+
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            fontPath="fonts/MontserratAlternates-Bold.ttf"
+            android:text="Next"
+            android:textSize="18dp"
+            />
+
+        <ImageView
+
+            android:layout_width="25dp"
+            android:src="@drawable/ic_next"
+            android:layout_height="20dp" />
+
+    </LinearLayout>
+
+</LinearLayout>

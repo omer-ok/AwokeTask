@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorHomeBgNew"
+    tools:context=".leader.activity.fragments.home.HomeFragment">
+
+    <com.kampen.riksSe.utils.CustomSwipeToRefresh
+        android:id="@+id/pullToRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_vertical"
+        android:focusableInTouchMode="true"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginBottom="@dimen/_100sdp"
+            android:paddingLeft="@dimen/_12sdp"
+            android:paddingRight="@dimen/_12sdp">
+
+
+            <Button
+                android:id="@+id/summaryBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_32sdp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginBottom="@dimen/_1sdp"
+                android:background="@drawable/button_clr"
+                android:fontFamily="@font/montserrat"
+                android:textStyle="bold"
+                android:drawableEnd="@drawable/ic_pdf_small_white"
+                android:drawablePadding="@dimen/_5sdp"
+                android:paddingStart="@dimen/_10sdp"
+                android:paddingEnd="@dimen/_10sdp"
+                android:text="@string/HealthProgramsModule_MyDiet"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12sdp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_23sdp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/montserrat"
+                android:gravity="center"
+                android:text="@string/HealthProgramsModule_Nutrition"
+                android:textColor="#AAAAAA"
+                android:textSize="@dimen/_13sdp"
+                 />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/nutritionRV"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_150sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:visibility="visible">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <RelativeLayout
+                android:id="@+id/NoDataView"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_150sdp"
+                android:background="@drawable/item_background_white"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/nodataImg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/icon_no_meals" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/nodataImg"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/HealthProgramsModule_Empty_Plan" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/nutritionMsg1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_150sdp"
+                android:gravity="center"
+                android:text="Plans Not Assigned y Trainer"
+                android:textColor="@color/dark_gray"
+                android:textSize="20dp"
+                android:visibility="gone" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:background="@color/dark_gray">
+
+            </View>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+
+                android:layout_height="@dimen/_23sdp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/montserrat"
+                android:gravity="center"
+                android:text="@string/HealthProgramsModule_TrainingAndFitness"
+                android:textColor="#AAAAAA"
+                android:textSize="@dimen/_13sdp"
+                />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/trainingRV"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_150sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:visibility="visible">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <RelativeLayout
+                android:id="@+id/NoDataView1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_150sdp"
+                android:background="@drawable/item_background_white"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/nodataImg1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/icon_no_meals" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/nodataImg1"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/HealthProgramsModule_Empty_Plan" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/trainingMsg2"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_150sdp"
+                android:gravity="center"
+                android:text="Plans Not Assigned y Trainer "
+                android:textColor="@color/dark_gray"
+                android:textSize="20dp"
+                android:visibility="gone" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:background="@color/dark_gray"
+                android:visibility="gone">
+
+            </View>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:gravity="center"
+                android:text="TRAININGS"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="17dp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:layout_marginTop="10dp"
+                android:visibility="gone">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+    </com.kampen.riksSe.utils.CustomSwipeToRefresh>
+</FrameLayout>

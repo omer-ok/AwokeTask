@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+      android:background="#f2f2f2"
+    tools:context="com.kampen.riksSe.leader.activity.fragments.home.traings.workout.WeekWorkOutActivity">
+
+
+
+    <LinearLayout
+        android:id="@+id/headerLyout"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_marginTop="0dp"
+        android:background="@drawable/app_bar_color"
+        android:layout_height="40dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:text="Weekly Schedule"
+            android:textColor="@color/white"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+
+
+    <ScrollView
+        android:layout_marginBottom="60dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/headerLyout"
+        android:layout_width="match_parent"
+        android:scrollbars="none"
+        android:layout_height="match_parent">
+
+
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+
+
+    <TextView
+        android:layout_marginTop="10dp"
+
+        android:layout_width="wrap_content"
+        android:textSize="17dp"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@android:color/darker_gray"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:text="Monday"
+        android:layout_height="25dp" />
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/workoutWeekRVDayOne"
+
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="110dp">
+
+    </androidx.recyclerview.widget.RecyclerView>
+        <TextView
+            android:id="@+id/trainingMsg1"
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:gravity="center"
+            android:visibility="gone"
+            android:textSize="20dp"
+            android:textColor="@color/dark_gray"
+            android:text="Training's not Assigned by Trainer "/>
+
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_marginTop="2dp"
+        android:background="@color/colorPrimary"
+        android:layout_height="1dp">
+
+    </View>
+
+    <TextView
+        android:layout_marginTop="10dp"
+
+        android:layout_width="wrap_content"
+        android:textSize="17dp"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@android:color/darker_gray"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:text="Tuesday"
+        android:layout_height="25dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/workoutWeekRVDayTwo"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="110dp">
+
+    </androidx.recyclerview.widget.RecyclerView>
+        <TextView
+            android:id="@+id/trainingMsg2"
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:gravity="center"
+            android:visibility="gone"
+            android:textSize="20dp"
+            android:textColor="@color/dark_gray"
+            android:text="Training's not Assigned by Trainer "/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_marginTop="2dp"
+        android:background="@color/colorPrimary"
+        android:layout_height="1dp">
+
+    </View>
+
+
+
+
+
+    <TextView
+        android:layout_marginTop="10dp"
+
+        android:layout_width="wrap_content"
+        android:textSize="17dp"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@android:color/darker_gray"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:text="Wednesday"
+        android:layout_height="25dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/workoutWeekRVDayThre"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="110dp">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+        <TextView
+            android:id="@+id/trainingMsg3"
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:gravity="center"
+            android:visibility="gone"
+            android:textSize="20dp"
+            android:textColor="@color/dark_gray"
+            android:text="Training's not Assigned by Trainer "/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_marginTop="2dp"
+        android:background="@color/colorPrimary"
+        android:layout_height="1dp">
+
+    </View>
+
+
+
+    <TextView
+        android:layout_marginTop="10dp"
+
+        android:layout_width="wrap_content"
+        android:textSize="17dp"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@android:color/darker_gray"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:text="Thursday"
+        android:layout_height="25dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/workoutWeekRVDayFour"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="110dp">
+
+    </androidx.recyclerview.widget.RecyclerView>
+        <TextView
+            android:id="@+id/trainingMsg4"
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:gravity="center"
+            android:visibility="gone"
+            android:textSize="20dp"
+            android:textColor="@color/dark_gray"
+            android:text="Training's not Assigned by Trainer "/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_marginTop="2dp"
+        android:background="@color/colorPrimary"
+        android:layout_height="1dp">
+
+    </View>
+
+
+
+    <TextView
+        android:layout_marginTop="10dp"
+
+        android:layout_width="wrap_content"
+        android:textSize="17dp"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@android:color/darker_gray"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:text="Friday"
+        android:layout_height="25dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/workoutWeekRVDayFive"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="110dp">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+        <TextView
+            android:id="@+id/trainingMsg5"
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:gravity="center"
+            android:visibility="gone"
+            android:textSize="20dp"
+            android:textColor="@color/dark_gray"
+            android:text="Training's not Assigned by Trainer "/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_marginTop="2dp"
+        android:background="@color/colorPrimary"
+        android:layout_height="1dp">
+
+    </View>
+
+
+    <TextView
+        android:layout_marginTop="10dp"
+
+        android:layout_width="wrap_content"
+        android:textSize="17dp"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@android:color/darker_gray"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:text="Saturday"
+        android:layout_height="25dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/workoutWeekRVDaySix"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="110dp">
+
+    </androidx.recyclerview.widget.RecyclerView>
+        <TextView
+            android:id="@+id/trainingMsg6"
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:gravity="center"
+            android:visibility="gone"
+            android:textSize="20dp"
+            android:textColor="@color/dark_gray"
+            android:text="Training's not Assigned by Trainer "/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_marginTop="2dp"
+        android:background="@color/colorPrimary"
+        android:layout_height="1dp">
+
+    </View>
+
+
+
+
+    <TextView
+        android:layout_marginTop="10dp"
+
+        android:layout_width="wrap_content"
+        android:textSize="17dp"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@android:color/darker_gray"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:text="Sunday"
+        android:layout_height="25dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/workoutWeekRVDaySeven"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="110dp">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+        <TextView
+            android:id="@+id/trainingMsg7"
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:gravity="center"
+            android:visibility="gone"
+            android:textSize="20dp"
+            android:textColor="@color/dark_gray"
+            android:text="Training's not Assigned by Trainer "/>
+
+
+
+
+    </LinearLayout>
+
+
+    </ScrollView>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+       android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:clickable="true"
+        android:onClick="onBackClick"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+
+        >
+
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="20dp"
+            android:rotation="180"
+            android:src="@drawable/ic_next" />
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="Back"
+            android:textSize="18dp" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

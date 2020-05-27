@@ -1,0 +1,833 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f2f2f2"
+    >
+
+
+    <LinearLayout
+        android:id="@+id/profileLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/item_background_white"
+        android:elevation="3dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+
+        <LinearLayout
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="15dp"
+            android:clickable="true"
+            android:gravity="center"
+            android:onClick="onEditProfileClick"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/profileImage"
+
+                android:layout_width="80dp"
+
+                android:layout_height="80dp"
+                android:layout_centerVertical="true"
+
+                android:src="@drawable/ic_profile_holder"
+                app:civ_border_color="@color/colortabselected"
+                app:civ_border_width="2dp" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Edit"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="14dp" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="@drawable/item_background_white"
+        android:id="@+id/fName_lName"
+        android:elevation="3dp"
+
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+
+        app:layout_constraintTop_toBottomOf="@+id/profileLayout"
+        android:layout_width="match_parent"
+        android:layout_height="140dp">
+
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:clickable="true"
+            android:onClick="onFNameClick"
+            android:layout_marginTop="5dp">
+
+
+            <TextView
+                android:layout_marginStart="18dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+
+
+                android:text="Fname"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="14dp" />
+
+
+
+            <TextView
+                android:id="@+id/fNameValue"
+                android:layout_marginStart="18dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+
+                android:layout_toLeftOf="@id/arrowFName"
+                android:text="umer"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="14dp" />
+
+
+
+            <ImageView
+                android:id="@+id/arrowFName"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:src="@drawable/ic_next" />
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="35dp"
+                android:background="@android:color/darker_gray"></View>
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:clickable="true"
+            android:onClick="onLNameClick"
+            android:layout_marginTop="5dp">
+
+
+            <TextView
+                android:layout_marginStart="18dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+
+
+                android:text="Lname"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="14dp" />
+
+
+
+            <TextView
+                android:id="@+id/lNameValue"
+                android:layout_marginStart="18dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+
+                android:layout_toLeftOf="@id/arrowLName"
+                android:text="umer"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="14dp" />
+
+
+
+            <ImageView
+                android:id="@+id/arrowLName"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:src="@drawable/ic_next" />
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="35dp"
+                android:background="@android:color/darker_gray"></View>
+
+        </RelativeLayout>
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:clickable="true"
+            android:onClick="onPassClick"
+            android:layout_marginTop="5dp">
+
+
+            <TextView
+                android:layout_marginStart="18dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+
+
+                android:text="Password"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="14dp" />
+
+
+
+            <TextView
+                android:id="@+id/passValue"
+                android:layout_marginStart="18dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+
+                android:layout_toLeftOf="@id/arrowPName"
+                android:text="12345"
+                android:inputType="textPassword"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="14dp" />
+
+
+
+            <ImageView
+                android:id="@+id/arrowPName"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:src="@drawable/ic_next" />
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="35dp"
+                android:background="@android:color/darker_gray"></View>
+
+        </RelativeLayout>
+
+
+
+
+    </LinearLayout>
+
+
+
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:elevation="3dp"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+
+        android:background="@drawable/item_background_white"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/fName_lName">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:clickable="true"
+            android:onClick="onGenderClick"
+            android:layout_marginTop="10dp">
+
+
+            <TextView
+                android:layout_marginStart="18dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+
+
+                android:text="Gender"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="14dp" />
+
+
+
+            <TextView
+                android:id="@+id/genderValue"
+                android:layout_marginStart="18dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+
+                android:layout_toLeftOf="@id/arrow"
+                android:text="Male"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="14dp" />
+
+
+
+            <ImageView
+                android:id="@+id/arrow"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:src="@drawable/ic_next" />
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="35dp"
+                android:background="@android:color/darker_gray"></View>
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:clickable="true"
+            android:onClick="onDOBClick"
+            android:layout_marginTop="5dp">
+
+
+            <TextView
+                android:layout_marginStart="18dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+
+
+                android:text="Date of birth"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="14dp" />
+
+
+
+            <TextView
+                android:id="@+id/dobValue"
+                android:layout_marginStart="18dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+
+                android:layout_toLeftOf="@id/arrowDOB"
+                android:text="9/1/1990"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="14dp" />
+
+
+
+            <ImageView
+                android:id="@+id/arrowDOB"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:src="@drawable/ic_next" />
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="35dp"
+                android:background="@android:color/darker_gray"></View>
+
+        </RelativeLayout>
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:clickable="true"
+            android:onClick="onHeightClick"
+            android:layout_marginTop="5dp">
+
+
+            <TextView
+                android:layout_marginStart="18dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+
+
+                android:text="Height"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="14dp" />
+
+
+
+            <TextView
+                android:id="@+id/heightValue"
+                android:layout_marginStart="18dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+
+                android:layout_toLeftOf="@id/arrowHeight"
+                android:text="170 cm"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="14dp" />
+
+
+
+            <ImageView
+                android:id="@+id/arrowHeight"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:src="@drawable/ic_next" />
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="35dp"
+                android:background="@android:color/darker_gray"></View>
+
+        </RelativeLayout>
+
+
+
+        <RelativeLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:clickable="true"
+            android:onClick="onWeightClick"
+            android:layout_marginTop="5dp">
+
+
+            <TextView
+                android:layout_marginStart="18dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+
+
+                android:text="Weight"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="14dp" />
+
+
+
+            <TextView
+                android:id="@+id/weightValue"
+                android:layout_marginStart="18dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+
+                android:layout_toLeftOf="@id/arrowWeight"
+                android:text="60 kg"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="14dp" />
+
+
+
+            <ImageView
+                android:id="@+id/arrowWeight"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:src="@drawable/ic_next" />
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="35dp"
+                android:background="@android:color/darker_gray"></View>
+
+        </RelativeLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginEnd="8dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+
+            >
+
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="20dp"
+                android:rotation="180"
+                android:src="@drawable/ic_next" />
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:onClick="onBackClick"
+                android:text="Back"
+                android:textSize="18dp" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <!--<EditText
+        android:id="@+id/editText_fName"
+        fontPath="fonts/MontserratAlternates-Regular.ttf"
+        android:layout_width="0dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:ems="10"
+        android:gravity="center_vertical"
+        android:hint="@string/user_fnam_hint"
+        android:inputType="text"
+        android:maxLength="30"
+        android:text=""
+
+        android:textColor="@android:color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profileLayout" />
+
+
+    <EditText
+        android:id="@+id/editText_lName"
+        fontPath="fonts/MontserratAlternates-Regular.ttf"
+        android:layout_width="0dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:ems="10"
+        android:gravity="center_vertical"
+        android:hint="@string/user_lnam_hint"
+
+        android:maxLength="30"
+        android:text=""
+        android:textColor="@android:color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_fName" />
+
+
+    <EditText
+        android:visibility="gone"
+        android:id="@+id/editText_email"
+        fontPath="fonts/MontserratAlternates-Regular.ttf"
+        android:layout_width="0dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:ems="10"
+        android:gravity="center_vertical"
+        android:hint="@string/user_email_hint"
+        android:inputType="textEmailAddress"
+        android:maxLength="30"
+        android:text=""
+        android:textColor="@android:color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_lName" />
+
+
+    <EditText
+        android:visibility="gone"
+        android:id="@+id/editText_pass"
+        fontPath="fonts/MontserratAlternates-Regular.ttf"
+        android:layout_width="0dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:ems="10"
+        android:gravity="center_vertical"
+        android:hint="@string/user_pass_hint"
+        android:inputType="numberPassword"
+        android:maxLength="30"
+        android:text=""
+        android:textColor="@android:color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_email" />
+
+    <EditText
+        android:visibility="gone"
+        android:id="@+id/editText_pass_c"
+        fontPath="fonts/MontserratAlternates-Regular.ttf"
+        android:layout_width="0dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:ems="10"
+        android:gravity="center_vertical"
+        android:hint="@string/user_pass_hint_c"
+        android:inputType="numberPassword"
+        android:maxLength="30"
+        android:text=""
+        android:textColor="@android:color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_pass" />
+
+
+    <EditText
+        android:id="@+id/editText_Age"
+        fontPath="fonts/MontserratAlternates-Regular.ttf"
+        android:layout_width="0dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginBottom="8dp"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:ems="10"
+        android:focusable="false"
+        android:gravity="center_vertical"
+        android:hint="Age"
+        android:inputType="textEmailAddress"
+        android:maxLength="30"
+        android:text=""
+        android:clickable="true"
+        android:onClick="onAgeClick"
+        android:textColor="@android:color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_pass_c"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+    <TextView
+        android:id="@+id/textViewHeight"
+        fontPath="fonts/MontserratAlternates-Regular.ttf"
+        android:layout_width="120dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="5dp"
+        android:text="Height"
+        android:textSize="16dp"
+        android:textColor="@android:color/darker_gray"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_Age" />
+
+
+    <EditText
+        android:id="@+id/editText_Height_F"
+        fontPath="fonts/MontserratAlternates-Regular.ttf"
+        android:layout_width="60dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:gravity="center"
+        android:paddingLeft="5dp"
+        android:text=""
+        android:hint="ft"
+        android:clickable="true"
+        android:focusable="false"
+        android:onClick="onHeightInFeetClick"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:textColor="@android:color/black"
+        app:layout_constraintStart_toEndOf="@+id/textViewHeight"
+        app:layout_constraintTop_toBottomOf="@+id/editText_Age" />
+
+
+    <EditText
+        android:id="@+id/editText_Height_I"
+        fontPath="fonts/MontserratAlternates-Regular.ttf"
+        android:layout_width="60dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:gravity="center"
+        android:hint="in"
+        android:paddingLeft="5dp"
+        android:text=""
+        android:clickable="true"
+        android:focusable="false"
+        android:onClick="onHeightInIncheClick"
+        android:textColor="@android:color/black"
+        app:layout_constraintEnd_toEndOf="@+id/editText_Age"
+        app:layout_constraintStart_toEndOf="@id/editText_Height_F"
+        app:layout_constraintTop_toBottomOf="@+id/editText_Age" />
+
+
+    <EditText
+        android:id="@+id/editText_Weight"
+        fontPath="fonts/MontserratAlternates-Regular.ttf"
+        android:layout_width="0dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginBottom="8dp"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:ems="10"
+
+        android:gravity="center_vertical"
+        android:hint="Weight in kg"
+
+        android:maxLength="30"
+        android:text=""
+        android:clickable="true"
+        android:focusable="false"
+        android:onClick="onWeightClick"
+        android:textColor="@android:color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewHeight"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+    <EditText
+        android:visibility="gone"
+        android:id="@+id/editText_Sex"
+        fontPath="fonts/MontserratAlternates-Regular.ttf"
+        android:layout_width="0dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginBottom="8dp"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:ems="10"
+        android:focusable="false"
+        android:gravity="center_vertical"
+        android:hint="Sex"
+        android:clickable="true"
+        android:onClick="onSexClick"
+        android:maxLength="30"
+        android:text="male"
+        android:textColor="@android:color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_Weight"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+    <TextView
+        android:id="@+id/button_signup"
+        fontPath="fonts/MontserratAlternates-Bold.ttf"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:background="@drawable/button_background"
+        android:clickable="true"
+        android:gravity="center"
+
+        android:text="Save"
+        android:textColor="@android:color/white"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_Sex" />-->
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

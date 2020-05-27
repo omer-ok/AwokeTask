@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/signupbg"
+    >
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="@dimen/_270sdp"
+        android:layout_height="@dimen/_100sdp"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:layout_marginLeft="@dimen/_8sdp"
+        android:layout_marginTop="@dimen/_40sdp"
+        android:layout_marginEnd="@dimen/_8sdp"
+        android:layout_marginRight="@dimen/_8sdp"
+        android:src="@drawable/logo_transparent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <FrameLayout
+        android:id="@+id/view"
+        android:layout_width="@dimen/_270sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:layout_marginLeft="@dimen/_8sdp"
+        android:visibility="invisible"
+        android:layout_marginEnd="@dimen/_8sdp"
+        android:layout_marginRight="@dimen/_8sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"/>
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view">
+
+        <LinearLayout
+            android:id="@+id/navigationView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/screenViewOne"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/background_circle_white"
+                android:gravity="center"
+                android:text="1"
+                />
+            <View
+                android:layout_width="@dimen/_40sdp"
+                android:layout_gravity="center"
+                android:background="@color/white"
+                android:layout_height="1dp"
+                >
+
+            </View>
+            <TextView
+                android:id="@+id/screenViewTwo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/background_circle_transparent"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:text="2"
+                />
+
+        </LinearLayout>
+
+
+        <EditText
+            android:id="@+id/dobValuetxt"
+            android:layout_width="@dimen/_200sdp"
+            android:layout_height="55dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="55dp"
+            android:layout_marginEnd="55dp"
+            android:background="@drawable/grey_border_tint"
+            android:ems="10"
+            android:onClick="onDOBClick"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:inputType="none"
+            android:fontFamily="@font/montserrat"
+            android:hint="@string/UpdateProfile_DOB"
+            android:padding="8dp"
+            android:textAlignment="center"
+            android:textColor="#fff"
+            android:textSize="14sp"
+            android:layout_below="@+id/navigationView"
+            android:textColorHint="@color/dark_gray"
+            />
+
+        <RelativeLayout
+            android:id="@+id/genderView"
+            android:layout_width="@dimen/_200sdp"
+            android:layout_height="55dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/dobValuetxt"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/genderMale"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="55dp"
+                android:layout_marginEnd="@dimen/_6sdp"
+                android:background="@drawable/grey_border_tint"
+                android:ems="10"
+                android:fontFamily="@font/montserrat"
+                android:gravity="center"
+                android:inputType="textPersonName"
+                android:hint="@string/UpdateProfile_Male"
+                android:textAlignment="center"
+                android:textColor="#fff"
+                android:textColorHint="@color/dark_gray"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/genderFemale"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="55dp"
+                android:background="@drawable/grey_border_tint"
+                android:ems="10"
+                android:gravity="center"
+                android:fontFamily="@font/montserrat"
+                android:hint="Kvinna"
+                android:layout_toRightOf="@id/genderMale"
+                android:inputType="textPersonName"
+                android:textAlignment="center"
+                android:textColor="#fff"
+                android:textSize="14sp"
+                android:textColorHint="@color/dark_gray"
+                />
+
+
+        </RelativeLayout>
+
+
+        <Button
+            android:id="@+id/button_next"
+            android:layout_width="@dimen/_200sdp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_marginStart="55dp"
+            android:layout_marginEnd="55dp"
+            android:layout_marginBottom="25dp"
+            android:onClick="onNextClick"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/button_clr"
+            android:backgroundTint="#BD9967 "
+            android:fontFamily="@font/montserrat"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:text="@string/General_Next"
+            android:textColor="#fff"
+            android:layout_below="@+id/genderView"
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:gravity="center_vertical"
+            android:visibility="gone"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/button_email"
+            android:layout_height="@dimen/_27sdp">
+
+
+
+            <ImageView
+                android:rotation="180"
+                android:layout_width="@dimen/_21sdp"
+                android:src="@drawable/ic_next"
+                android:layout_height="@dimen/_18sdp" />
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onBackClick"
+                android:fontFamily="@font/montserrat"
+                android:clickable="true"
+                android:textColor="#fff"
+                android:text="Tillbaka"
+                android:textSize="@dimen/_16sdp"
+                />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

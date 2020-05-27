@@ -1,0 +1,20 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.kampen.riksSe.leader.activity.fragments.order_history.fragments.PendingOrderFragment">
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginTop="@dimen/_15sdp"
+        android:id="@+id/completedOrderRV"
+        android:layout_below="@id/topLeaders"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="@dimen/_10sdp"
+        android:paddingRight="@dimen/_10sdp">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+
+</FrameLayout>

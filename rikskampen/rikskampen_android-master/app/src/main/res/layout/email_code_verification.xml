@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:background="@drawable/email_code_bg">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="@dimen/_270sdp"
+            android:layout_height="@dimen/_100sdp"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginLeft="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_40sdp"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:layout_marginRight="@dimen/_8sdp"
+            android:src="@drawable/logo_actionbar"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:id="@+id/inputText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/dark_gray"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/logo"
+            android:text="@string/ResetPasswordModule_Description"
+            android:textSize="14dp"
+            />
+
+
+
+        <ImageView
+            android:id="@+id/passicon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_phone_email_code"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/inputText"
+            />
+
+        <TextView
+            android:id="@+id/verytext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/passicon"
+            android:layout_marginTop="10dp"
+            android:text="@string/ResetPasswordModule_VerifyCode_Description"
+            android:textSize="18dp" />
+
+        <RelativeLayout
+            android:id="@+id/codelayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/verytext"
+            >
+
+            <com.mukesh.OtpView
+                android:id="@+id/otp_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:inputType="number"
+                android:clickable="true"
+                android:layout_centerHorizontal="true"
+                android:itemBackground="@drawable/grey_border_tint"
+                android:textColor="@color/white"
+                app:itemCount="4"
+                app:lineColor="#80000000"
+                app:viewType="rectangle"
+                />
+
+            <!--<EditText
+                android:id="@+id/VerifyCode1"
+                android:inputType="text"
+                android:layout_width="40dp"
+                android:layout_height="@dimen/_35sdp"
+                android:hint=""
+                android:gravity="center"
+                android:maxLength="1"
+                android:background="@drawable/grey_border_tint"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="@dimen/_12sdp" />
+
+            <EditText
+                android:id="@+id/VerifyCode2"
+                android:inputType="text"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_width="40dp"
+                android:layout_height="@dimen/_35sdp"
+
+                android:layout_toRightOf="@+id/VerifyCode1"
+                android:hint=""
+                android:gravity="center"
+                android:maxLength="1"
+                android:background="@drawable/grey_border_tint"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="@dimen/_12sdp" />
+
+            <EditText
+                android:id="@+id/VerifyCode3"
+                android:inputType="text"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_width="40dp"
+                android:layout_height="@dimen/_35sdp"
+
+                android:layout_toRightOf="@+id/VerifyCode2"
+                android:hint=""
+                android:gravity="center"
+                android:maxLength="1"
+                android:background="@drawable/grey_border_tint"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="@dimen/_12sdp" />
+
+            <EditText
+                android:id="@+id/VerifyCode4"
+                android:inputType="text"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_width="40dp"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_toRightOf="@+id/VerifyCode3"
+                android:hint=""
+                android:gravity="center"
+                android:maxLength="1"
+                android:background="@drawable/grey_border_tint"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="@dimen/_12sdp" />
+
+-->
+
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/resendcode"
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="50dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginEnd="0dp"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/codelayout"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="16dp"
+                android:text="@string/ResetPasswordModule_ResendVerifyCode"
+                />
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/_1sdp"
+            android:gravity="center_vertical"
+            android:layout_height="@dimen/_27sdp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/resendcode"
+            >
+
+            <ImageView
+                android:rotation="180"
+                android:layout_width="@dimen/_21sdp"
+                android:src="@drawable/ic_next"
+                android:layout_height="@dimen/_18sdp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onBackClick"
+                android:clickable="true"
+                android:text="@string/General_Back"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_16sdp"
+                />
+
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+
+
+
+</LinearLayout>
+
+
+

@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".signup.SignUpActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="@dimen/_270sdp"
+        android:layout_height="@dimen/_100sdp"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginEnd="8dp"
+        android:src="@drawable/ic_splash"
+
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <EditText
+        android:id="@+id/editText_fName"
+        fontPath="fonts/MontserratAlternates-Regular.ttf"
+        android:layout_width="0dp"
+        android:layout_marginTop="@dimen/_18sdp"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_marginStart="@dimen/_32sdp"
+        android:layout_marginEnd="@dimen/_32sdp"
+        android:layout_marginBottom="@dimen/_8sdp"
+        android:background="@drawable/background_border_circle"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="First name"
+        android:textSize="@dimen/_12sdp"
+        android:inputType="textEmailAddress"
+        android:maxLength="30"
+        android:text=""
+        android:textColor="@android:color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+    <EditText
+        android:id="@+id/editText_lName"
+        fontPath="fonts/MontserratAlternates-Regular.ttf"
+        android:layout_width="0dp"
+        android:textSize="@dimen/_12sdp"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginStart="@dimen/_32sdp"
+        android:layout_marginEnd="@dimen/_32sdp"
+        android:layout_marginBottom="@dimen/_8sdp"
+        android:background="@drawable/background_border_circle"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Last name"
+        android:inputType="textEmailAddress"
+        android:maxLength="30"
+        android:text=""
+        android:textColor="@android:color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_fName"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+
+
+    <EditText
+        android:id="@+id/editText_email"
+        fontPath="fonts/MontserratAlternates-Regular.ttf"
+        android:layout_width="0dp"
+        android:textSize="@dimen/_12sdp"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginStart="@dimen/_32sdp"
+        android:layout_marginLeft="@dimen/_32sdp"
+        android:layout_marginEnd="@dimen/_32sdp"
+        android:layout_marginRight="@dimen/_32sdp"
+        android:background="@drawable/background_border_circle"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="textEmailAddress"
+        android:maxLength="100"
+        android:text=""
+        android:textColor="@android:color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_lName" />
+
+
+<!--
+    <EditText
+        android:id="@+id/editText_pass"
+        fontPath="fonts/MontserratAlternates-Regular.ttf"
+        android:layout_width="0dp"
+        android:textSize="@dimen/_12sdp"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginStart="@dimen/_32sdp"
+        android:layout_marginLeft="@dimen/_32sdp"
+        android:layout_marginEnd="@dimen/_32sdp"
+        android:layout_marginRight="@dimen/_32sdp"
+        android:background="@drawable/background_border_circle"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="@string/user_pass_hint"
+        android:inputType="textPassword"
+        android:maxLength="30"
+        android:text=""
+        android:textColor="@android:color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_email" />
+
+    <EditText
+        android:id="@+id/editText_pass_c"
+        fontPath="fonts/MontserratAlternates-Regular.ttf"
+        android:layout_width="0dp"
+        android:textSize="@dimen/_12sdp"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginStart="@dimen/_32sdp"
+        android:layout_marginLeft="@dimen/_32sdp"
+        android:layout_marginEnd="@dimen/_32sdp"
+        android:layout_marginRight="@dimen/_32sdp"
+        android:background="@drawable/background_border_circle"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="@string/user_pass_hint_c"
+        android:inputType="textPassword"
+        android:maxLength="30"
+        android:text=""
+        android:textColor="@android:color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_pass" />
+-->
+
+
+    <EditText
+        android:id="@+id/editText_Age"
+        android:visibility="gone"
+        fontPath="fonts/MontserratAlternates-Regular.ttf"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_marginStart="@dimen/_32sdp"
+        android:layout_marginLeft="@dimen/_32sdp"
+        android:layout_marginEnd="@dimen/_32sdp"
+        android:layout_marginRight="@dimen/_32sdp"
+        android:layout_marginBottom="@dimen/_8sdp"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:ems="10"
+        android:focusable="false"
+        android:gravity="center_vertical"
+        android:hint="Date of birth"
+        android:inputType="textEmailAddress"
+        android:maxLength="30"
+        android:text=""
+        android:clickable="true"
+        android:onClick="onAgeClick"
+        android:textColor="@android:color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_pass_c"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+    <EditText
+        android:id="@+id/editTextHeight"
+        android:visibility="gone"
+        fontPath="fonts/MontserratAlternates-Regular.ttf"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_marginStart="@dimen/_32sdp"
+        android:layout_marginLeft="@dimen/_32sdp"
+        android:layout_marginEnd="@dimen/_32sdp"
+        android:gravity="center_vertical"
+        android:paddingLeft="5dp"
+        android:hint="Height in cm"
+        android:text=""
+        android:inputType="number"
+        android:textSize="16dp"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:textColor="@android:color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_Age" />
+
+
+   <!-- <EditText
+        android:id="@+id/editText_Height_F"
+        fontPath="fonts/MontserratAlternates-Regular.ttf"
+        android:layout_width="60dp"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:layout_marginLeft="@dimen/_8sdp"
+        android:gravity="center"
+        android:paddingLeft="5dp"
+        android:text=""
+        android:hint="ft"
+        android:clickable="true"
+        android:focusable="false"
+        android:onClick="onHeightInFeetClick"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:textColor="@android:color/black"
+        app:layout_constraintStart_toEndOf="@+id/textViewHeight"
+        app:layout_constraintTop_toBottomOf="@+id/editText_Age" />
+
+
+    <EditText
+        android:id="@+id/editText_Height_I"
+        fontPath="fonts/MontserratAlternates-Regular.ttf"
+        android:layout_width="60dp"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:layout_marginLeft="@dimen/_8sdp"
+        android:layout_marginEnd="@dimen/_8sdp"
+        android:layout_marginRight="@dimen/_8sdp"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:gravity="center"
+        android:hint="in"
+        android:paddingLeft="5dp"
+        android:text=""
+        android:clickable="true"
+        android:focusable="false"
+        android:onClick="onHeightInIncheClick"
+        android:textColor="@android:color/black"
+        app:layout_constraintEnd_toEndOf="@+id/editText_Age"
+        app:layout_constraintStart_toEndOf="@id/editText_Height_F"
+        app:layout_constraintTop_toBottomOf="@+id/editText_Age" />-->
+
+
+    <EditText
+        android:id="@+id/editText_Weight"
+        android:visibility="gone"
+        fontPath="fonts/MontserratAlternates-Regular.ttf"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_marginStart="@dimen/_32sdp"
+        android:layout_marginEnd="@dimen/_32sdp"
+        android:backgroundTint="@color/colorPrimaryDark"
+
+        android:clickable="true"
+        android:ems="10"
+
+        android:focusable="false"
+        android:gravity="center_vertical"
+        android:hint="Weight in kg"
+        android:maxLength="30"
+        android:onClick="onWeightClick"
+        android:text=""
+
+        android:textColor="@android:color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextHeight" />
+
+
+    <EditText
+
+        android:id="@+id/editText_Sex"
+        android:visibility="gone"
+        fontPath="fonts/MontserratAlternates-Regular.ttf"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_marginStart="@dimen/_32sdp"
+        android:layout_marginLeft="@dimen/_32sdp"
+        android:layout_marginEnd="@dimen/_32sdp"
+        android:layout_marginRight="@dimen/_32sdp"
+        android:layout_marginBottom="@dimen/_8sdp"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:ems="10"
+        android:focusable="false"
+        android:gravity="center_vertical"
+        android:hint="Sex"
+        android:clickable="true"
+        android:onClick="onSexClick"
+        android:maxLength="30"
+        android:text=""
+        android:textColor="@android:color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_Weight"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+    <TextView
+        android:id="@+id/button_signup"
+        fontPath="fonts/MontserratAlternates-Bold.ttf"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginStart="@dimen/_32sdp"
+        android:layout_marginLeft="@dimen/_32sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_32sdp"
+        android:layout_marginRight="@dimen/_32sdp"
+        android:background="@drawable/button_background"
+        android:clickable="true"
+        android:gravity="center"
+        android:onClick="onNextClick"
+        android:text="Next"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/_18sdp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_email" />
+
+
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:gravity="center_vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_signup"
+        android:layout_height="@dimen/_27sdp">
+
+
+
+        <ImageView
+            android:rotation="180"
+            android:layout_width="@dimen/_21sdp"
+            android:src="@drawable/ic_next"
+            android:layout_height="@dimen/_18sdp" />
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onBackClick"
+            android:clickable="true"
+            android:text="Back"
+            android:textSize="@dimen/_16sdp"
+            />
+
+    </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

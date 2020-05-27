@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".leader.activity.fragments.account.profile.ContestantScheduledLiveVideoCall.ContestantSchduledLiveVideoCallActivity">
+
+
+    <RelativeLayout
+        android:id="@+id/headerLyout"
+        android:layout_width="match_parent"
+        android:background="@drawable/app_bar_color"
+        android:layout_height="60dp"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_marginLeft="20dp"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:onClick="onBackClick"
+            android:src="@drawable/icon_back_arrow_white"
+            android:layout_height="25dp" />
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/logo_actionbar"/>
+
+
+        <RelativeLayout
+            android:id="@+id/chatLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:visibility="gone"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_toRightOf="@+id/logo"
+            >
+
+
+            <ImageView
+                android:id="@+id/icon"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/icon_message"/>
+
+            <com.nex3z.notificationbadge.NotificationBadge
+                android:id="@+id/chatNotify"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_toRightOf="@id/icon"
+                android:layout_alignTop="@id/icon"
+                android:layout_marginLeft="-16dp"
+                android:layout_marginTop="-8dp"
+                app:nbBackground="@drawable/badge_bg_with_shadow"
+                app:nbMaxTextLength="2"/>
+
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/pullToRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/headerLyout">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/todaySchduleView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/todaySchduleHeading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="Todays Meeting Schdule"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:textSize="@dimen/_15sdp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/montserrat"
+                    android:textStyle="bold"/>
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/ContestantTodayScheduledLiveVideoCallRV"
+                    android:layout_below="@+id/todaySchduleHeading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_centerHorizontal="true"
+                    >
+                </androidx.recyclerview.widget.RecyclerView>
+
+                <RelativeLayout
+                    android:id="@+id/NoDataTodayView"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_150sdp"
+                    android:layout_below="@+id/todaySchduleHeading"
+                    android:background="@drawable/item_background_white"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/nodataImg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/icon_no_meals" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/nodataImg"
+                        android:layout_centerHorizontal="true"
+                        android:text="@string/No_Schdule_Assign" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/todaySchduleView">
+                <TextView
+                    android:id="@+id/FutureSchduleHeading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="Future Meeting Schdule"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:textSize="@dimen/_15sdp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/montserrat"
+                    android:textStyle="bold"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/ContestantFutureScheduledLiveVideoCallRV"
+                    android:layout_below="@+id/FutureSchduleHeading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    >
+                </androidx.recyclerview.widget.RecyclerView>
+
+                <RelativeLayout
+                    android:id="@+id/NoDataFutureView"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_150sdp"
+                    android:layout_below="@+id/FutureSchduleHeading"
+                    android:background="@drawable/item_background_white"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/nodataImg1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/icon_no_meals" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/nodataImg1"
+                        android:layout_centerHorizontal="true"
+                        android:text="@string/No_Schdule_Assign" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/add_schdule"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/_10sdp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                app:fabSize="mini"
+                app:srcCompat="@drawable/ic_add" />
+
+        </RelativeLayout>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+</RelativeLayout>

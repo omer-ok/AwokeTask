@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "641588526265",
+    "firebase_url": "https://rikskampen-chat.firebaseio.com",
+    "project_id": "rikskampen-75ff9",
+    "storage_bucket": "rikskampen-75ff9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:641588526265:android:134f8fb1863f4fac",
+        "android_client_info": {
+          "package_name": "com.kampen.riksSe"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "641588526265-ihvcskbo5icro1gj2t7cbnvgare98adv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.kampen.riksSe",
+            "certificate_hash": "8c443256ca7c67e90cdfeb44a0a856e1fcee8b2a"
+          }
+        },
+        {
+          "client_id": "641588526265-i04t4fcgict705hs24ab8sbleasqc55k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBaIASnLiAFPAIxfQgkULbS_ZBcqTE2r0w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "641588526265-p791ki45u0ujmljnvffvsvkquh57vt1f.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "641588526265-5krdpm2o149vi2u1rql3at6dbruks3ab.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.RiksKampen.se"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

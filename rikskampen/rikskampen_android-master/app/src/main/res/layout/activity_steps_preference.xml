@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".leader.activity.fragments.home.addactivity.weekly.daily.StepCounter.StepsPreference">
+
+    <RelativeLayout
+        android:id="@+id/headerLyout"
+        android:layout_width="match_parent"
+        android:layout_marginTop="0dp"
+        android:background="@drawable/app_bar_color"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints">
+
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_marginLeft="20dp"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:onClick="onBackClick"
+            android:src="@drawable/icon_back_arrow_white"
+            android:layout_height="25dp" />
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/logo_actionbar"/>
+
+
+
+        <TextView
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:visibility="invisible"
+            android:text="Omoss"
+            android:textColor="@color/white"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/headerLyout"
+        android:layout_margin="@dimen/_10sdp"
+        >
+        <TextView
+            android:id="@+id/heding"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/General_Step_Counting_Preference"
+            android:fontFamily="@font/montserrat"
+            android:textSize="@dimen/_15sdp"
+            android:textColor="#AAAAAA"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/heding"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/StepPermission"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                >
+                <ImageView
+                    android:id="@+id/help_ic"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+
+                    android:background="@drawable/ic_help"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/help_ic"
+                    android:layout_centerInParent="true"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:fontFamily="@font/montserrat"
+                    android:textSize="@dimen/_12sdp"
+                    android:text="@string/General_Step_Counting_Stop_steps"
+                    />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/GoogleFitPermission"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                >
+                <ImageView
+                    android:id="@+id/google_ic"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+
+                    android:background="@drawable/ic_google"/>
+                <TextView
+                    android:layout_width="@dimen/_200sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/google_ic"
+                    android:layout_centerInParent="true"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:fontFamily="@font/montserrat"
+                    android:textSize="@dimen/_12sdp"
+                    android:text="@string/General_Google_Fit"
+                    />
+                <Switch
+                    android:id="@+id/googleSwitch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:checked="false"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                >
+                <ImageView
+                    android:id="@+id/bightness_ic"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:background="@drawable/ic_sun"/>
+                <TextView
+                    android:id="@+id/screnOntxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/bightness_ic"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:textSize="@dimen/_12sdp"
+                    android:fontFamily="@font/montserrat"
+                    android:textColor="@color/very_dark_gray"
+                    android:text="@string/General_Step_Counting_Screen_ON"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/screnOntxt"
+                    android:layout_toRightOf="@+id/bightness_ic"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:textColor="#AAAAAA"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:fontFamily="@font/montserrat"
+                    android:text="@string/General_Step_Counting_Screen_ON_DES"
+                    />
+                <Switch
+                    android:id="@+id/simpleSwitch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:checked="false"/>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

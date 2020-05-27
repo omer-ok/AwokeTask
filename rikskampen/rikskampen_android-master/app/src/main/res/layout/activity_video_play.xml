@@ -1,0 +1,495 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_1sdp"
+        android:background="@drawable/app_bar_color"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/backbtn"
+            android:layout_width="20dp"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:onClick="onBackClick"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:src="@drawable/icon_back_arrow_white"
+            />
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/logo_actionbar"/>
+
+        <TextView
+            android:id="@+id/MealTitle"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:visibility="invisible"
+            android:text="Träning och Kondition"
+            android:textColor="@color/white"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@+id/top_bar"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/black">
+
+
+        <VideoView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_margin="5dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:id="@+id/exerciseVideo" />
+
+
+
+
+            <com.wang.avi.AVLoadingIndicatorView
+                android:layout_centerInParent="true"
+                android:layout_marginTop="18dp"
+                android:id="@+id/triangleProgressView"
+                android:scaleX="1.4"
+                android:scaleY="1.4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:indicatorName="BallTrianglePathIndicator"
+                />
+
+            <ImageView
+                android:id="@+id/ScreenChange"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_alignParentEnd="true"
+                android:layout_margin="@dimen/_10sdp"
+                android:visibility="gone"
+                android:background="@drawable/ic_switch_to_full_screen_button"
+                />
+
+            <ImageView
+                android:id="@+id/replayVideo"
+                android:visibility="gone"
+                android:layout_width="40dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:layout_centerVertical="true"
+                app:srcCompat="@drawable/ic_replay_white"
+                android:layout_height="40dp" />
+
+            <ImageView
+                android:id="@+id/nextVideo"
+                android:visibility="gone"
+                android:layout_width="40dp"
+                android:layout_marginTop="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/_20sdp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/next_btn"
+                android:layout_height="40dp" />
+
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:id="@+id/fullscreenMax"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:visibility="gone"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp"
+            android:paddingTop="5dp"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/Max"
+                android:layout_width="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:src="@drawable/ic_fullscreen"
+                    android:layout_height="25dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="Fullskärm"
+                    android:textSize="16dp"
+                    android:visibility="visible"
+                    android:textColor="@color/dark_gray"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:visibility="gone"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:src="@drawable/ic_fullscreen"
+                    android:layout_height="25dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="Liten skärm"
+                    android:textSize="16dp"
+                    android:textColor="@color/dark_gray"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_marginLeft="60dp"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        app:srcCompat="@drawable/ic_clock"
+                        android:layout_height="25dp" />
+
+                    <TextView
+                        android:id="@+id/timeTV"
+                        android:layout_width="wrap_content"
+                        android:text="0:00"
+                        android:textSize="16dp"
+                        android:textColor="@color/dark_gray"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:clickable="true"
+                android:onClick="onVolumeClick"
+                android:layout_marginLeft="60dp"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/speaker"
+                    android:layout_width="25dp"
+                    app:srcCompat="@drawable/speaker"
+                    android:layout_height="25dp" />
+
+                <ImageView
+                    android:id="@+id/mute"
+                    android:layout_width="25dp"
+                    app:srcCompat="@drawable/mute"
+                    android:visibility="gone"
+                    android:layout_height="25dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="Ljud"
+                    android:textSize="16dp"
+                    android:textColor="@color/dark_gray"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:id="@+id/Description"
+            android:layout_width="match_parent"
+            android:background="@drawable/item_background_white"
+            android:elevation="3dp"
+            android:padding="5dp"
+            android:layout_margin="5dp"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+
+
+
+
+
+
+            <TextView
+                android:id="@+id/titleView"
+                android:layout_width="wrap_content"
+                android:text="@string/WorkoutVideoModule_Exercise"
+                android:textSize="@dimen/_12sdp"
+                android:fontFamily="@font/montserrat"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/Title"
+                android:layout_width="wrap_content"
+                android:text=""
+                android:fontFamily="@font/montserrat"
+                android:textSize="@dimen/_10sdp"
+                android:textColor="@color/black"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/musclegroupView"
+                android:layout_width="wrap_content"
+                android:text="@string/WorkoutVideoModule_MusleGroup"
+                android:textSize="@dimen/_12sdp"
+                android:fontFamily="@font/montserrat"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/musclePart"
+                android:layout_width="wrap_content"
+                android:text=""
+                android:fontFamily="@font/montserrat"
+                android:textSize="@dimen/_10sdp"
+                android:textColor="@color/black"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/rapView"
+                android:layout_width="wrap_content"
+                android:text="@string/WorkoutVideoModule_Reps"
+                android:textSize="@dimen/_12sdp"
+                android:fontFamily="@font/montserrat"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/rapsValue"
+                android:layout_width="wrap_content"
+                android:text=""
+                android:textSize="@dimen/_10sdp"
+                android:fontFamily="@font/montserrat"
+                android:textColor="@color/black"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/setView"
+                android:layout_width="wrap_content"
+                android:text="@string/WorkoutVideoModule_Sets"
+                android:textSize="@dimen/_12sdp"
+                android:fontFamily="@font/montserrat"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/SetsValue"
+                android:layout_width="wrap_content"
+                android:text=""
+                android:fontFamily="@font/montserrat"
+                android:textSize="@dimen/_10sdp"
+                android:textColor="@color/black"
+                android:layout_height="wrap_content" />
+
+
+            <TextView
+                android:id="@+id/decView"
+                android:layout_width="wrap_content"
+                android:text="@string/WorkoutVideoModule_Instructions"
+                android:textSize="@dimen/_12sdp"
+                android:fontFamily="@font/montserrat"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/Desc"
+                android:layout_width="wrap_content"
+                android:text=""
+                android:textSize="@dimen/_10sdp"
+                android:fontFamily="@font/montserrat"
+                android:textColor="@color/black"
+                android:layout_height="wrap_content" />
+
+
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/RelatedVideoList"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+
+
+        </LinearLayout>
+
+
+
+
+
+    </LinearLayout>
+
+
+    <!--<LinearLayout
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+
+        >
+
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="20dp"
+            android:rotation="180"
+            android:src="@drawable/ic_next" />
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:onClick="onBackClick"
+            android:text="Back"
+            android:textSize="18dp" />
+
+    </LinearLayout>-->
+
+
+    <LinearLayout
+        android:id="@+id/fullScreenMin"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp"
+        android:paddingTop="5dp"
+        android:background="@color/black"
+        android:visibility="gone"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content">
+
+
+
+
+        <LinearLayout
+            android:id="@+id/Min1"
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:visibility="visible"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:src="@drawable/ic_fullscreen"
+                android:layout_height="25dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="Liten skärm"
+                android:textSize="16dp"
+                android:textColor="@color/dark_gray"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+
+            android:layout_marginLeft="60dp"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="25dp"
+                app:srcCompat="@drawable/ic_clock_gold"
+                android:layout_height="25dp" />
+
+            <TextView
+                android:id="@+id/timeTV1"
+                android:layout_width="wrap_content"
+                android:text="0:00"
+                android:textSize="16dp"
+                android:textColor="@color/dark_gray"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:clickable="true"
+            android:onClick="onVolumeClick"
+            android:layout_marginLeft="60dp"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="25dp"
+                app:srcCompat="@drawable/ic_speaker"
+                android:layout_height="25dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="Ljud"
+                android:textSize="16dp"
+                android:textColor="@color/dark_gray"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+
+
+</RelativeLayout>

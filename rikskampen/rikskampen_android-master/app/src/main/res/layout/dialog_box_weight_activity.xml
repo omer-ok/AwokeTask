@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/item_background_white_circle"
+    >
+
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/_10sdp"
+    >
+    <Button
+        android:id="@+id/cancelBtn"
+        android:layout_width="@dimen/_15sdp"
+        android:layout_height="@dimen/_15sdp"
+        android:textStyle="bold"
+        android:layout_alignParentEnd="true"
+        android:layout_toLeftOf="@+id/textView"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:background="@drawable/ic_close"
+        />
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_below="@+id/cancelBtn"
+        android:visibility="gone"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:textSize="@dimen/_12sdp"
+        android:text="DAGLIG UPPDATERING"
+        />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:layout_below="@id/textView"
+        android:textColor="@color/black"
+        android:visibility="gone"
+        android:textSize="@dimen/_12sdp"
+        android:textAlignment="center"
+        android:text="Ange din nuvarande vikt i KG och mät midja i CM"
+        />
+
+    <EditText
+        android:id="@+id/editTextDialogUserInput"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_30sdp"
+        android:inputType="numberDecimal"
+        android:drawablePadding="@dimen/_5sdp"
+        android:background="@drawable/input_background"
+        android:hint="Ange din Vikt (kg)"
+        android:drawableStart="@drawable/ic_weight_scale"
+        android:maxLines="1"
+        android:maxLength="5"
+        android:textSize="@dimen/_10sdp"
+        android:layout_below="@id/textView1" />
+    <View
+        android:id="@+id/view1"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="@dimen/_8sdp"
+        android:background="@color/black"
+        android:layout_height="1dp"
+        android:layout_below="@+id/editTextDialogUserInput"
+        >
+
+    </View>
+
+    <EditText
+        android:id="@+id/editTextDialogUserInput1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_30sdp"
+        android:inputType="numberDecimal"
+        android:drawablePadding="@dimen/_5sdp"
+        android:hint="Ange Midjemått (cm)"
+        android:maxLines="1"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:background="@drawable/input_background"
+        android:drawableStart="@drawable/icon_waist"
+        android:maxLength="5"
+        android:textSize="@dimen/_10sdp"
+        android:layout_below="@id/editTextDialogUserInput" />
+    <View
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="@dimen/_8sdp"
+        android:background="@color/black"
+        android:layout_height="1dp"
+        android:layout_below="@+id/editTextDialogUserInput1"
+        >
+
+    </View>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_below="@id/editTextDialogUserInput1">
+
+        <Button
+            android:id="@+id/okBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_30sdp"
+            android:text="Lägg till aktivitet   "
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:padding="@dimen/_5sdp"
+            android:textSize="@dimen/_10sdp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/button_clr"
+            />
+
+    </RelativeLayout>
+
+</RelativeLayout>
+
+</RelativeLayout>

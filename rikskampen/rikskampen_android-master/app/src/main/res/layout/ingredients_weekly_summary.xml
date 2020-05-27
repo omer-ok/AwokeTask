@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorHomeBgNew"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_1sdp"
+        android:background="@drawable/app_bar_color"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/backbtn"
+            android:layout_width="20dp"
+            android:layout_height="25dp"
+            android:onClick="onBackClick"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:src="@drawable/icon_back_arrow_white"
+            />
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/logo_actionbar"/>
+
+        <TextView
+            android:id="@+id/MealTitle"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:textSize="20dp"
+            android:visibility="invisible"
+            android:textStyle="bold"
+            android:text="Hälsa och Näring"
+            android:textColor="@color/white"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        app:layout_constraintRight_toLeftOf="parent"
+        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/top_bar">
+
+
+
+        <HorizontalScrollView
+            android:id="@+id/tabsContainerWeeks"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintRight_toLeftOf="parent"
+            app:layout_constraintLeft_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            >
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_marginLeft="@dimen/_1sdp"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:layout_marginRight="@dimen/_1sdp">
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+                <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/tab_week1"
+                    android:layout_width="@dimen/_80sdp"
+                    android:layout_height="@dimen/_32sdp"
+                    android:gravity="center"
+                    android:text="VECKA 1"
+                    android:fontFamily="@font/montserrat"
+                    android:textColor="@android:color/white"
+                    android:background="@drawable/tab_middle_selected"
+                    android:textSize="@dimen/_13sdp"
+                    android:textStyle="bold" />
+
+                <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/tab_week2"
+                    android:layout_width="@dimen/_80sdp"
+                    android:layout_height="@dimen/_32sdp"
+                    android:gravity="center"
+                    android:text="VECKA 2"
+                    android:visibility="visible"
+                    android:fontFamily="@font/montserrat"
+                    android:textColor="@color/colortabselected"
+                    android:background="@drawable/tab_middle_unselected"
+                    android:textSize="@dimen/_13sdp"
+                    android:textStyle="bold" />
+
+
+                <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/tab_week3"
+                    android:layout_width="@dimen/_80sdp"
+                    android:gravity="center"
+                    android:layout_height="@dimen/_32sdp"
+                    android:text="VECKA 3"
+                    android:visibility="visible"
+                    android:fontFamily="@font/montserrat"
+                    android:textColor="@color/colortabselected"
+                    android:background="@drawable/tab_middle_unselected"
+                    android:textSize="@dimen/_13sdp"
+                    android:textStyle="bold" />
+
+                <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/tab_week4"
+                    android:layout_width="@dimen/_80sdp"
+                    android:gravity="center"
+                    android:layout_height="@dimen/_32sdp"
+                    android:text="VECKA 4"
+                    android:visibility="visible"
+                    android:fontFamily="@font/montserrat"
+                    android:textColor="@color/colortabselected"
+                    android:background="@drawable/tab_middle_unselected"
+                    android:textSize="@dimen/_13sdp"
+                    android:textStyle="bold" />
+
+                <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/tab_week5"
+                    android:layout_width="@dimen/_80sdp"
+                    android:gravity="center"
+                    android:layout_height="@dimen/_32sdp"
+                    android:text="VECKA 5"
+                    android:visibility="visible"
+                    android:fontFamily="@font/montserrat"
+                    android:textColor="@color/colortabselected"
+                    android:background="@drawable/tab_middle_unselected"
+                    android:textSize="@dimen/_13sdp"
+                    android:textStyle="bold" />
+
+                <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/tab_week6"
+                    android:layout_width="@dimen/_80sdp"
+                    android:gravity="center"
+                    android:layout_height="@dimen/_32sdp"
+                    android:text="VECKA 6"
+                    android:visibility="visible"
+                    android:fontFamily="@font/montserrat"
+                    android:textColor="@color/colortabselected"
+                    android:background="@drawable/tab_middle_unselected"
+                    android:textSize="@dimen/_13sdp"
+                    android:textStyle="bold" />
+
+                <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/tab_week7"
+                    android:layout_width="@dimen/_80sdp"
+                    android:gravity="center"
+                    android:layout_height="@dimen/_32sdp"
+                    android:text="VECKA 7"
+                    android:visibility="visible"
+                    android:fontFamily="@font/montserrat"
+                    android:textColor="@color/colortabselected"
+                    android:background="@drawable/tab_middle_unselected"
+                    android:textSize="@dimen/_13sdp"
+                    android:textStyle="bold" />
+
+                <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/tab_week8"
+                    android:layout_width="@dimen/_80sdp"
+                    android:gravity="center"
+                    android:layout_height="@dimen/_32sdp"
+                    android:text="VECKA 8"
+                    android:visibility="visible"
+                    android:fontFamily="@font/montserrat"
+                    android:textColor="@color/colortabselected"
+                    android:background="@drawable/tab_middle_unselected"
+                    android:textSize="@dimen/_13sdp"
+                    android:textStyle="bold" />
+
+                <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/tab_week9"
+                    android:layout_width="@dimen/_80sdp"
+                    android:gravity="center"
+                    android:layout_height="@dimen/_32sdp"
+                    android:text="VECKA 9"
+                    android:visibility="visible"
+                    android:fontFamily="@font/montserrat"
+                    android:textColor="@color/colortabselected"
+                    android:background="@drawable/tab_middle_unselected"
+                    android:textSize="@dimen/_13sdp"
+                    android:textStyle="bold" />
+
+                <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/tab_week10"
+                    android:layout_width="@dimen/_80sdp"
+                    android:gravity="center"
+                    android:layout_height="@dimen/_32sdp"
+                    android:text="VECKA 10"
+                    android:visibility="visible"
+                    android:fontFamily="@font/montserrat"
+                    android:textColor="@color/colortabselected"
+                    android:background="@drawable/tab_right_unselected"
+                    android:textSize="@dimen/_13sdp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+
+        </HorizontalScrollView>
+
+
+        <TextView
+            android:id="@+id/titleWeek"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Veckoöversikt"
+            android:fontFamily="@font/montserrat"
+            android:textSize="@dimen/_20sdp"
+            android:textStyle="bold"
+            android:visibility="gone"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginLeft="@dimen/_30sdp"
+            android:layout_marginRight="@dimen/_30sdp"
+            app:layout_constraintRight_toLeftOf="parent"
+            app:layout_constraintLeft_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tabsContainerWeeks"/>
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_400sdp"
+            android:background="@color/white"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginLeft="@dimen/_30sdp"
+            android:layout_marginRight="@dimen/_30sdp"
+            app:layout_constraintRight_toLeftOf="parent"
+            app:layout_constraintLeft_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/titleWeek">
+
+
+            <LinearLayout
+                android:id="@+id/layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:src="@drawable/icon_cart"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/montserrat"
+                    android:textSize="@dimen/_12sdp"
+                    android:text="Veckans matvaror"/>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/labelIngrdi"
+                android:layout_width="match_parent"
+                android:gravity="center_vertical"
+                android:layout_below="@+id/layout"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:background="#E4E4E4">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:text="Ingredienser"
+                    android:fontFamily="@font/montserrat"
+                    android:textSize="10dp"
+                    android:textStyle="bold"
+                    android:layout_marginStart="@dimen/_30sdp"
+                    android:textColor="@color/black"
+                    android:layout_height="wrap_content" />
+
+
+
+                <TextView
+                    android:id="@+id/carbsLabel"
+                    android:layout_width="wrap_content"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:text="Enheter(grm/ml/tbs)"
+                    android:textSize="10dp"
+                    android:fontFamily="@font/montserrat"
+                    android:layout_alignParentRight="true"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_30sdp"
+
+                    />
+
+
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/IngrediantsWeekRV"
+                android:visibility="visible"
+                android:layout_below="@+id/labelIngrdi"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/_1sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:layout_marginRight="@dimen/_1sdp">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/NoDataView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_400sdp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:visibility="invisible"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:layout_constraintRight_toLeftOf="parent"
+            app:layout_constraintLeft_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/titleWeek"
+            android:background="@drawable/item_background_white">
+
+        <ImageView
+            android:id="@+id/nodataImg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/icon_no_meals"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/nodataImg"
+            android:fontFamily="@font/montserrat"
+            android:layout_centerHorizontal="true"
+            android:text="Nej Planer Tilldelade"
+            />
+        </RelativeLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E8E8E8"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginBottom="@dimen/_2sdp">
+
+
+
+    <RelativeLayout
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_1sdp"
+        android:visibility="visible"
+        android:background="@drawable/app_bar_color"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/backbtn"
+            android:layout_width="20dp"
+            android:layout_height="25dp"
+            android:onClick="onBackClick"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:src="@drawable/icon_back_arrow_white"
+            />
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/logo_actionbar"/>
+
+        <TextView
+            android:id="@+id/MealTitle"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:textSize="20dp"
+            android:visibility="gone"
+            android:textStyle="bold"
+            android:text="Hälsa och Näring"
+            android:textColor="@color/white"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/NoDataView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_500sdp"
+        android:visibility="gone"
+        android:background="@drawable/item_background_white"
+        app:layout_constraintRight_toLeftOf="parent"
+        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/top_bar">
+
+        <ImageView
+            android:id="@+id/nodataImg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/icon_no_meals"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/nodataImg"
+            android:layout_centerHorizontal="true"
+            android:text="Nej Planer Tilldelade"
+            />
+
+    </RelativeLayout>
+
+
+    <!--<android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/pullToRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        app:layout_constraintRight_toLeftOf="parent"
+        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/top_bar">-->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/nutrionDataView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        app:layout_constraintRight_toLeftOf="parent"
+        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/top_bar">
+
+
+
+            <RelativeLayout
+                android:id="@+id/MealView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintRight_toLeftOf="parent"
+                app:layout_constraintLeft_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                >
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/mealRV"
+                    android:visibility="visible"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/tab_view_layout_borderline"
+                    android:layout_marginLeft="@dimen/_1sdp"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:layout_marginRight="@dimen/_1sdp">
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+
+
+
+            </RelativeLayout>
+
+
+
+
+
+
+
+        <!-- <LinearLayout
+             android:id="@+id/tabScrolldays"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_marginLeft="@dimen/_10sdp"
+             android:layout_marginRight="@dimen/_10sdp"
+             app:layout_constraintRight_toLeftOf="parent"
+             app:layout_constraintLeft_toRightOf="parent"
+             app:layout_constraintTop_toBottomOf="@id/tabsContainerWeeks"
+
+             >
+
+             <android.support.v7.widget.RecyclerView
+                 android:id="@+id/dailyRV"
+                 android:layout_width="match_parent"
+                 android:layout_height="@dimen/_40sdp"
+                 android:layout_marginLeft="@dimen/_1sdp"
+                 android:layout_marginBottom="@dimen/_5sdp"
+                 android:layout_marginRight="@dimen/_1sdp">
+
+             </android.support.v7.widget.RecyclerView>
+
+
+
+         </LinearLayout>-->
+
+            <RelativeLayout
+                android:id="@+id/mealOptionView"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp"
+                android:gravity="center_vertical"
+                android:layout_height="@dimen/_35sdp"
+                app:layout_constraintRight_toLeftOf="parent"
+                app:layout_constraintLeft_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/MealView"
+                >
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/mealOptionRV"
+                    android:visibility="visible"
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_marginLeft="@dimen/_1sdp"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:layout_marginRight="@dimen/_1sdp">
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+            </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/dotView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:layout_constraintRight_toLeftOf="parent"
+            app:layout_constraintLeft_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/mealOptionView">
+
+            <com.tbuonomo.viewpagerdotsindicator.SpringDotsIndicator
+                android:id="@+id/spring_dots_indicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                app:dampingRatio="0.5"
+                app:dotsColor="#776E6E"
+                app:dotsStrokeColor="#776E6E"
+                app:dotsCornerRadius="5dp"
+                app:dotsSize="12dp"
+                app:dotsSpacing="6dp"
+                app:dotsStrokeWidth="1dp"
+                app:stiffness="300"
+                />
+
+
+        </RelativeLayout>
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/view_pager2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="24dp"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintRight_toLeftOf="parent"
+            app:layout_constraintLeft_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/dotView"
+            />
+
+        <Button
+            android:id="@+id/weeklySummary"
+            android:layout_width="@dimen/_180sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_centerInParent="true"
+            android:visibility="gone"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:textColor="@color/white"
+            android:paddingLeft="@dimen/_15sdp"
+            android:paddingRight="@dimen/_15sdp"
+            android:fontFamily="@font/montserrat"
+            android:textSize="@dimen/_10sdp"
+            android:text="Veckans matvaror"
+            android:background="@drawable/button_background"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:layout_constraintRight_toLeftOf="parent"
+            app:layout_constraintLeft_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/view_pager2"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

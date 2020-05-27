@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/tab_view"
+    android:orientation="vertical"
+    android:padding="@dimen/_2sdp"
+    android:layout_width="wrap_content"
+    android:gravity="center"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:id="@+id/tab_dayTime_layout1"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:elevation="2dp"
+
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:id="@+id/tab_dayTime2_1"
+            android:layout_width="@dimen/_120sdp"
+            android:layout_height="@dimen/_32sdp"
+            android:gravity="center"
+            android:text=""
+            android:background="@drawable/tab_unselected_rounded_courners"
+            android:textColor="@color/colortabselected"
+            android:textSize="@dimen/_13sdp"
+            android:fontFamily="@font/montserrat_semi_bold"
+            android:textStyle="bold"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/tab_dayTime_layout"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:elevation="2dp"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:id="@+id/tab_dayTime2"
+            android:layout_width="@dimen/_120sdp"
+            android:layout_height="@dimen/_32sdp"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@color/colortabselected"
+            android:background="@drawable/tab_unselected_rounded_courners"
+            android:textSize="@dimen/_10sdp"
+            android:fontFamily="@font/montserrat_semi_bold"
+            android:textStyle="bold"
+            />
+        <RelativeLayout
+            android:id="@+id/unavailableDay"
+            android:layout_width="@dimen/_120sdp"
+            android:layout_height="@dimen/_32sdp"
+            android:visibility="gone"
+            android:background="#9FFF">
+
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+</RelativeLayout>
+

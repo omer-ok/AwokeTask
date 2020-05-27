@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:id="@+id/headerLyout"
+        android:layout_width="match_parent"
+        android:layout_marginTop="2dp"
+        android:background="@drawable/app_bar_color"
+        android:layout_height="50dp"
+        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintRight_toLeftOf="parent"
+        tools:ignore="MissingConstraints">
+
+
+
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_marginLeft="20dp"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:onClick="onBackClick"
+            android:src="@drawable/icon_back_arrow_white"
+            android:layout_height="25dp" />
+
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/logo_actionbar"/>
+
+
+        <Button
+            android:id="@+id/SaveAllergiesBtn"
+            android:layout_toRightOf="@+id/logo"
+            android:layout_width="wrap_content"
+            android:textSize="@dimen/_12sdp"
+            android:visibility="gone"
+            android:textStyle="bold"
+            android:text="Spara"
+            android:background="@drawable/app_bar_color"
+            android:textColor="@color/white"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/SearchViewRv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/headerLyout">
+
+
+        <RelativeLayout
+            android:id="@+id/SearchView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            >
+
+            <AutoCompleteTextView
+                android:id="@+id/autoCompleteTextView"
+                android:layout_width="@dimen/_260sdp"
+                android:layout_height="40dp"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/_5sdp"
+                android:drawableLeft="@drawable/icon_search"
+                android:drawablePadding="@dimen/_5sdp"
+                android:hint="@string/AllergyModule_Search_And_Allergy"
+                android:background="@drawable/search_background"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:ems="10"
+                android:text="">
+
+                <requestFocus />
+            </AutoCompleteTextView>
+
+            <Button
+                android:id="@+id/AddUserAlergy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/autoCompleteTextView"
+                android:layout_marginTop="10dp"
+                android:text="add"
+                android:layout_centerVertical="true"
+                android:visibility="gone"
+                android:textColor="@color/white"
+                android:background="@drawable/button_clr"
+                android:layout_marginStart="5dp"
+                />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:background="@color/dark_gray"
+            android:layout_below="@+id/SearchView"
+            android:layout_height="1dp">
+
+        </View>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/addAlergiesRV"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_below="@+id/SearchView"
+            android:layout_height="match_parent">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/view"
+        android:layout_width="@dimen/_250sdp"
+        android:layout_height="@dimen/_20sdp"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:visibility="gone"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:background="@drawable/allergy_backcolor"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/SearchViewRv"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/addUserAlergiesRV"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_height="0dp">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:backgroundTint="@color/colortabselected"
+        app:srcCompat="@drawable/ic_save"
+        android:clickable="true"
+        android:visibility="gone"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_gravity="bottom|right"
+        />
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

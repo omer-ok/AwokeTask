@@ -1,0 +1,74 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F0F0F0"
+
+    >
+
+
+    <LinearLayout
+        android:id="@+id/tabsContainer"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:gravity="center_vertical"
+        android:layout_height="@dimen/_32sdp">
+
+
+        <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/tabLeft"
+
+            android:layout_width="@dimen/_80sdp"
+            android:layout_height="@dimen/_32sdp"
+            android:gravity="center"
+            android:text="Pending"
+            android:textColor="@android:color/white"
+            android:background="@drawable/tab_left_selected"
+            android:textSize="@dimen/_13sdp"
+            android:textStyle="bold" />
+
+        <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/tabMiddle"
+
+            android:layout_width="@dimen/_80sdp"
+            android:layout_height="@dimen/_32sdp"
+            android:gravity="center"
+            android:text="Completed"
+            android:textColor="@color/colortabselected"
+            android:background="@drawable/tab_middle_unselected"
+            android:textSize="@dimen/_13sdp"
+            android:textStyle="bold" />
+
+
+        <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/tabRight"
+            android:layout_width="@dimen/_80sdp"
+            android:gravity="center"
+            android:layout_height="@dimen/_32sdp"
+            android:text="Canceled"
+
+            android:textColor="@color/colortabselected"
+            android:background="@drawable/tab_right_unselected"
+            android:textSize="@dimen/_13sdp"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+
+
+
+
+    <androidx.viewpager.widget.ViewPager
+
+        android:layout_below="@id/tabsContainer"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/viewpager"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+
+</RelativeLayout>

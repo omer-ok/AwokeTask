@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/diaryView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <CheckBox
+            android:id="@+id/diaryCheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="#BD9967"
+            android:focusable="false"
+            android:clickable="false"
+            android:focusableInTouchMode="false"
+            android:fontFamily="@font/montserrat"
+            android:layout_below="@+id/editText_pass"
+            android:textColor="#FFF" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/diary_question"
+            android:textSize="12sp"
+            android:fontFamily="@font/montserrat"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_toRightOf="@+id/diaryCheckBox"
+            android:text=""/>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

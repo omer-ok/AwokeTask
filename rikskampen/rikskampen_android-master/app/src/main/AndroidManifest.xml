@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.kampen.riksSe"
+    android:targetSandboxVersion="1">
+
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="com.google.maps.android.utils.permission.MAPS_RECEIVE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+    <uses-feature android:name="android.hardware.camera" />
+
+    <uses-permission android:name="com.sec.android.provider.badge.permission.READ" />
+    <uses-permission android:name="com.sec.android.provider.badge.permission.WRITE" /> <!-- Sony -->
+    <uses-permission android:name="com.sonyericsson.home.permission.BROADCAST_BADGE" /> <!-- HTC -->
+    <uses-permission android:name="com.htc.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="com.htc.launcher.permission.UPDATE_SHORTCUT" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.hardware.camera.autofocus" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW " />
+    <uses-permission android:name="android.permission.ACTIVITY_RECOGNITION" />
+    <uses-permission android:name="oppo.permission.OPPO_COMPONENT_SAFE" />
+    <uses-permission android:name="com.huawei.permission.external_app_settings.USE_COMPONENT" />
+    <uses-permission
+        android:name="android.permission.DEVICE_POWER"
+        tools:ignore="ProtectedPermissions" />
+
+    <permission
+        android:name="com.google.maps.android.utils.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature" />
+
+    <meta-data
+        android:name="com.kampen.riksSe.utils.CustomTimeOutOkHttpGlideModule"
+        android:value="GlideModule" />
+
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="false"
+        android:icon="@drawable/ic_app_launch"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:roundIcon="@drawable/ic_app_launch"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:replace="allowBackup,supportsRtl">
+        <activity android:name=".leader.activity.fragments.account.profile.ContestantScheduledLiveVideoCall.ContestantReSchduleLiveVideoCall.ConestantDaySchdule.DaySchduleActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeFullScreen"></activity>
+        <activity
+            android:name=".leader.activity.fragments.account.profile.ContestantScheduledLiveVideoCall.ContestantReSchduleLiveVideoCall.ContestantReschduleLiveVideoCallActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeFullScreen" />
+        <activity
+            android:name=".leader.activity.fragments.account.profile.ContestantScheduledLiveVideoCall.ContestantSchduledLiveVideoCallActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeFullScreen" />
+        <activity
+            android:name=".TrainerApp.TrainersMainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeFullScreen" />
+        <activity
+            android:name=".TrainerApp.ScheduledLiveVideoCall.ScheduledLiveVideoCallActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeFullScreen" />
+        <activity
+            android:name=".leader.activity.fragments.account.profile.LiveVideoCall.LiveVideoCall"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeFullScreen" />
+        <activity
+            android:name=".leader.activity.fragments.home.addactivity.weekly.daily.StepCounter.StepsPreference"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeFullScreen" />
+        <activity
+            android:name=".UpdateLoginProfile.updateProfileStartTwoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeFullScreen" />
+        <activity
+            android:name=".UpdateLoginProfile.updateProfileStartOneActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeFullScreen" />
+        <activity
+            android:name=".leader.activity.fragments.home.traings.workout.WorkOutNewUIDyActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeFullScreen" />
+        <activity
+            android:name=".leader.activity.fragments.home.nutrition.NutritionNewUIMealActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeFullScreen" />
+        <activity
+            android:name=".SplashActivity"
+            android:theme="@style/SplashScreenTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service android:name=".BroadCastReciver.MyService" />
+        <service android:name=".BroadCastReciver.NotificationAlertService" />
+        <service android:name=".BroadCastReciver.DailyActivitySyncService" />
+        <service android:name=".BroadCastReciver.UpdateCurrentActivityWithGoogleFit" />
+        <service android:name=".BroadCastReciver.RestartAlarmsService" />
+        <service android:name=".BroadCastReciver.GoogleFitTodayStepsService" />
+        <service android:name=".BroadCastReciver.StepCountingStop" />
+        <service
+            android:name=".BroadCastReciver.DailyStepsService"
+            android:exported="false" />
+        <service android:name=".BroadCastReciver.DailyStepsServiceInternet" />
+
+        <receiver
+            android:name=".BroadCastReciver.MyBroadcastReceiver"
+            android:enabled="true"
+            android:exported="true" />
+        <receiver
+            android:name=".BroadCastReciver.StepCountingRunningCheckReceiver"
+            android:enabled="true"
+            android:exported="true" />
+        <receiver
+            android:name=".BroadCastReciver.PostActivityNotificationReceiver"
+            android:enabled="true"
+            android:exported="true" />
+        <receiver
+            android:name=".BroadCastReciver.UpdateTodayActivityWithGoogleReceiver"
+            android:enabled="true"
+            android:exported="true" />
+        <receiver android:name=".BroadCastReciver.DeviceRestartStatusReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".BroadCastReciver.DateChangeReceiver" />
+        <!--
+ <receiver android:name=".BroadCastReciver.UpdateReceiver">
+            <intent-filter>
+                <action android:name="android.net.wifi.WIFI_STATE_CHANGED"/>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+            </intent-filter>
+        </receiver>
+        -->
+        <activity
+            android:name=".camera.CameraActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name=".LoginSignupActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeFullScreen" />
+        <activity
+            android:name=".login.LoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeFullScreen" />
+        <activity
+            android:name=".ForgotPassword.ForgotPasswordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeFullScreen" />
+        <activity
+            android:name=".signup.SignUpActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeFullScreen" />
+        <activity
+            android:name=".signup.SignUpActivity2"
+            android:theme="@style/AppThemeFullScreen" />
+        <activity
+            android:name=".signup.SignUpDuoActivity"
+            android:theme="@style/AppThemeFullScreen" />
+        <activity
+            android:name=".leader.activity.fragments.home.addactivity.FullscreenVideo"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/AppThemeFullScreen" />
+        <activity
+            android:name=".leader.activity.MainLeaderActivity"
+            android:label="@string/title_activity_main_leader"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeFullScreen" />
+
+        <uses-library
+            android:name="com.google.android.maps"
+            android:required="true" />
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyDDjH_kMgOdbyoJ6_46pw_ZntAC9K1qvr4" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="firebase_crashlytics_collection_enabled"
+            android:value="false" />
+
+        <activity
+            android:name=".leader.activity.fragments.account.editprofile.EditProfileActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeFullScreen" />
+        <activity
+            android:name=".leader.activity.fragments.chat.ChatActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeFullScreen" />
+        <activity
+            android:name=".leader.activity.fragments.account.profile.About"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeFullScreen" />
+        <activity
+            android:name=".leader.activity.fragments.home.nutrition.RecipeSummary"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeFullScreen" />
+        <activity
+            android:name=".leader.activity.fragments.account.profile.Faq"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeFullScreen" />
+        <activity
+            android:name=".leader.activity.fragments.account.profile.AddAllergiesDislikes.AddAllergies"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeFullScreen" />
+        <activity
+            android:name=".leader.activity.fragments.account.profile.AddAllergiesDislikes.AddAllergiesV3"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeFullScreen" />
+        <activity
+            android:name=".leader.activity.fragments.account.profile.PrivacyPolicy"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeFullScreen" />
+        <activity
+            android:name=".leader.activity.fragments.plans.IntroActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeFullScreen" />
+        <activity
+            android:name=".leader.activity.fragments.home.traings.workout.WeekWorkOutActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeFullScreen" />
+        <activity
+            android:name=".leader.activity.fragments.home.nutrition.IngredientsWeeklySummary"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeFullScreen" />
+        <activity
+            android:name=".leader.activity.fragments.order_history.webshop.WebShopActivity"
+            android:theme="@style/AppThemeFullScreen" />
+        <activity
+            android:name=".leader.activity.fragments.home.traings.workout.detail.VideoPlayActivity"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/AppThemeFullScreen" />
+        <activity
+            android:name=".leader.activity.fragments.home.traings.workout.detail.WorkoutMotivationVideo"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/AppThemeFullScreen" />
+        <activity
+            android:name=".leader.activity.fragments.home.traings.workout.detail.WorkOutVideoActivityNew"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/AppThemeFullScreen" />
+        <activity
+            android:name=".leader.activity.fragments.home.nutrition.detail.RecipeVideoActivity"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/AppThemeFullScreen" />
+        <activity
+            android:name=".leader.activity.fragments.home.nutrition.detail.NutritionActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeFullScreen" />
+        <activity
+            android:name=".leader.activity.fragments.home.addactivity.weekly.WeeklyActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeFullScreen" />
+        <activity
+            android:name=".leader.activity.fragments.home.addactivity.weekly.daily.DailyActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeFullScreen" />
+        <activity
+            android:name=".leader.activity.fragments.home.addactivity.weekly.daily.DailyImageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeFullScreen" />
+        <activity
+            android:name=".ForgotPassword.EmailVerificationActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/OTPTheme" />
+        <activity
+            android:name=".ChangePassword.ResetPasswordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeFullScreen" />
+
+        <service android:name=".leader.activity.fragments.home.addactivity.weekly.daily.StepCounter.StepCountingService" />
+
+        <activity android:name=".BaseActivity" />
+        <activity
+            android:name=".leader.activity.fragments.account.editprofile.EditPofileSimpleActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeFullScreen" />
+
+        <service
+            android:name=".FCM.NotificationService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".leader.activity.fragments.map.tracking.GPS_Service"
+            android:foregroundServiceType="location" />
+
+        <receiver android:name=".leader.activity.fragments.map.tracking.GpsLocationReceiver">
+            <intent-filter>
+                <action android:name="android.location.KEY_PROVIDER_ENABLED" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".payment.PayEx.PayExPaymentActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".payment.PayEx.PayExPaymentWebViewActivity"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".payment.PayEx.PayExThankYou" />
+    </application>
+
+</manifest>

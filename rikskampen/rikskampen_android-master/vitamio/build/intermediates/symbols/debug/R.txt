@@ -1,0 +1,1 @@
+int color transparent 0x7f060001

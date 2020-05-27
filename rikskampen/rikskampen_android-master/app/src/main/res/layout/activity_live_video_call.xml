@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".leader.activity.fragments.account.profile.LiveVideoCall.LiveVideoCall">
+    <include layout="@layout/content_video" />
+
+    <RelativeLayout
+        android:id="@+id/headerLyout1"
+        android:layout_width="match_parent"
+        android:background="@drawable/app_bar_color"
+        android:layout_height="60dp"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_marginLeft="20dp"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:onClick="onBackClick"
+            android:src="@drawable/icon_back_arrow_white"
+            android:layout_height="25dp" />
+
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/logo_actionbar"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_centerInParent="true"
+            >
+            <ImageView
+                android:id="@+id/partisiptantStatus"
+                android:layout_width="@dimen/_10sdp"
+                android:layout_height="@dimen/_10sdp"
+                android:layout_centerVertical="true"
+                android:background="@drawable/circle_offline_btn_background"/>
+            <TextView
+                android:id="@+id/particpetentName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_5sdp"
+                android:fontFamily="@font/montserrat"
+                android:textColor="@color/white"
+                android:text=""
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:layout_toRightOf="@+id/partisiptantStatus" />
+
+        </RelativeLayout>
+        <!--      <ImageView
+                  android:layout_centerInParent="true"
+                  android:layout_gravity="center"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:background="@drawable/logo_actionbar"/>-->
+
+      <!--  <RelativeLayout
+            android:id="@+id/chatLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            vi
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_toRightOf="@+id/logo"
+            >
+
+            <ImageView
+                android:id="@+id/icon"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/icon_message"/>
+
+            <com.nex3z.notificationbadge.NotificationBadge
+                android:id="@+id/chatNotify"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_toRightOf="@id/icon"
+                android:layout_alignTop="@id/icon"
+                android:layout_marginLeft="-16dp"
+                android:layout_marginTop="-8dp"
+                app:nbBackground="@drawable/badge_bg_with_shadow"
+                app:nbMaxTextLength="2"/>
+
+
+        </RelativeLayout>-->
+
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/ContestantSchdulerTimer"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="@dimen/_20sdp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/headerLyout1">
+
+        <TextView
+            android:id="@+id/hourCounter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="@dimen/_12sdp"
+            android:textColor="@color/black"
+            android:text=""/>
+
+        <TextView
+            android:id="@+id/miniuteCounter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_toRightOf="@+id/hourCounter"
+            android:textSize="@dimen/_12sdp"
+            android:textColor="@color/black"
+            android:text=""/>
+        <TextView
+            android:id="@+id/secondsCounter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_toRightOf="@+id/miniuteCounter"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sdp"
+            android:text=""/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:padding="@dimen/_15sdp"
+        android:orientation="vertical">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/switch_camera_action_fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/_10sdp"
+            app:fabSize="mini"
+            app:srcCompat="@drawable/ic_switch_camera_white_24dp" />
+
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/mute_action_fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fabSize="mini"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/ic_mic_white_24dp" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

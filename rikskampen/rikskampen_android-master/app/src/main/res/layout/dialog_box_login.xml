@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/item_background_white_circle"
+     >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_10sdp"
+        >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:textSize="@dimen/_15sdp"
+            android:fontFamily="@font/montserrat"
+            android:text="@string/LoginModule_Already_Login_Detail"
+            />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="@dimen/_250sdp"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:background="@color/dark_gray"
+            android:visibility="visible"
+            android:layout_height="1dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/textView1">
+
+        </View>
+        <Button
+            android:id="@+id/cancelBtnlogin"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:text="@string/General_Cancel"
+            android:textStyle="bold"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:fontFamily="@font/montserrat"
+            android:background="@drawable/background_border_circle_gray"
+            android:layout_below="@id/view" />
+
+        <Button
+            android:id="@+id/okbtnLogin"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:text="@string/General_OK"
+            android:textStyle="bold"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:fontFamily="@font/montserrat"
+            android:background="@drawable/background_border_circle_gray"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/view" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

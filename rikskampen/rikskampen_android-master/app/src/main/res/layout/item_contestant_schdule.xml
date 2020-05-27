@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/tab_view"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:gravity="center"
+    android:layout_height="wrap_content">
+
+
+    <RelativeLayout
+        android:id="@+id/SchduleTimeLayout"
+        android:layout_width="match_parent"
+        android:background="#fff"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/profileImage"
+            android:layout_width="@dimen/_60sdp"
+            android:layout_height="@dimen/_60sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:src="@drawable/avatar_new"/>
+
+        <LinearLayout
+            android:id="@+id/dayView"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_toRightOf="@+id/profileImage"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/day"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:textSize="@dimen/_15sdp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/montserrat"
+                android:textStyle="bold"
+                android:text=""
+                />
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_15sdp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/montserrat"
+                android:text="26"
+                />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_toRightOf="@+id/dayView"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="@dimen/_10sdp"
+            >
+            <View
+                android:id="@+id/view"
+                android:layout_width="1dp"
+                android:background="#AAAAAA"
+                android:layout_height="@dimen/_50sdp"
+
+                >
+            </View>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/view">
+                <TextView
+                    android:id="@+id/startTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2:30 pm"
+                    android:textSize="@dimen/_10sdp"
+                    android:textColor="@color/black"
+                    android:layout_marginStart="@dimen/_13sdp"
+                    android:fontFamily="@font/montserrat"
+                    />
+
+                <TextView
+                    android:id="@+id/endTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="6:40 pm"
+                    android:textSize="@dimen/_10sdp"
+                    android:textColor="@color/black"
+                    android:layout_toRightOf="@+id/startTime"
+                    android:fontFamily="@font/montserrat"
+                    />
+                <TextView
+                    android:id="@+id/ContestantName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Omer Khan"
+                    android:textSize="@dimen/_15sdp"
+                    android:textStyle="bold"
+                    android:layout_below="@+id/startTime"
+                    android:textColor="@color/black"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:fontFamily="@font/montserrat"
+                    />
+                <TextView
+                    android:id="@+id/SchduleDateTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat"
+                    android:textSize="@dimen/_10sdp"
+                    android:layout_marginStart="@dimen/_13sdp"
+                    android:layout_below="@+id/ContestantName"
+                    android:textColor="@color/colorHomeBgNew"
+                    android:visibility="gone"
+                    android:text=""/>
+
+
+                <RelativeLayout
+                    android:id="@+id/SchduleActiveLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_below="@+id/ContestantName">
+                    <ImageView
+                        android:id="@+id/partisiptantStatus"
+                        android:layout_width="@dimen/_10sdp"
+                        android:layout_height="@dimen/_10sdp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/_13sdp"
+                        android:background="@drawable/circle_online_btn_background"/>
+                    <TextView
+                        android:id="@+id/SchduleActive"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat"
+                        android:textSize="@dimen/_10sdp"
+                        android:textColor="@color/black"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:visibility="visible"
+                        android:layout_toRightOf="@+id/partisiptantStatus"
+                        android:text="Meeting is On"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/ContestantSchdulerTimer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_below="@+id/ContestantName">
+
+                    <TextView
+                        android:id="@+id/hourCounter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textSize="@dimen/_12sdp"
+                        android:textColor="@color/black"
+                        android:text=""/>
+
+                    <TextView
+                        android:id="@+id/miniuteCounter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_toRightOf="@+id/hourCounter"
+                        android:textSize="@dimen/_12sdp"
+                        android:textColor="@color/black"
+                        android:text=""/>
+                    <TextView
+                        android:id="@+id/secondsCounter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_toRightOf="@+id/miniuteCounter"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_12sdp"
+                        android:text=""/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true">
+                    <ImageView
+                        android:id="@+id/editSchdule"
+                        android:layout_width="@dimen/_15sdp"
+                        android:layout_height="@dimen/_15sdp"
+                        app:srcCompat="@drawable/ic_edit_schdule"/>
+
+
+                    <ImageView
+                        android:id="@+id/deleteSchdule"
+                        android:layout_width="@dimen/_15sdp"
+                        android:layout_height="@dimen/_15sdp"
+                        android:layout_below="@+id/editSchdule"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        app:srcCompat="@drawable/ic_delete"/>
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>
+

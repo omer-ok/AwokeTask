@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mealTypeView"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:elevation="2dp"
+    android:gravity="center"
+    android:layout_gravity="center_horizontal"
+    android:layout_height="wrap_content">
+
+    <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/meal_Type"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_45sdp"
+        android:gravity="center"
+        android:text="Egg"
+        android:paddingStart="@dimen/_10sdp"
+        android:paddingEnd="@dimen/_10sdp"
+        android:textColor="@color/black"
+        android:background="@drawable/tab_middle_unselected_days"
+        android:textSize="@dimen/_10sdp"
+       android:fontFamily="@font/montserrat_semi_bold"
+        android:textStyle="bold" />
+
+
+</LinearLayout>
