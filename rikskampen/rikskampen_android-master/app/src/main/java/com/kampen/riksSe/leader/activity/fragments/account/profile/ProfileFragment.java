@@ -2,14 +2,12 @@ package com.kampen.riksSe.leader.activity.fragments.account.profile;
 
 import android.Manifest;
 import android.content.BroadcastReceiver;
-import android.content.ComponentName;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
-import android.os.Build;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -26,11 +24,8 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
-import android.widget.ToggleButton;
 
 
-import com.google.firebase.iid.FirebaseInstanceId;
-import com.kampen.riksSe.BroadCastReciver.UpdateReceiver;
 import com.kampen.riksSe.ChangePassword.ResetPasswordActivity;
 import com.kampen.riksSe.DI.LocalApiService;
 import com.kampen.riksSe.DI.ServiceLocator;
@@ -39,22 +34,16 @@ import com.kampen.riksSe.MyApplication;
 import com.kampen.riksSe.R;
 
 
-import com.kampen.riksSe.TrainerApp.ScheduledLiveVideoCall.ScheduledLiveVideoCallActivity;
 import com.kampen.riksSe.api.remote_api.V2_api_model.Competition;
 import com.kampen.riksSe.data_manager.Repository;
-import com.kampen.riksSe.leader.activity.MainLeaderActivity;
-import com.kampen.riksSe.leader.activity.fragments.LeaderBordTab.LeaderBoardFragment;
 import com.kampen.riksSe.leader.activity.fragments.account.editprofile.EditPofileSimpleActivity;
-import com.kampen.riksSe.leader.activity.fragments.account.profile.AddAllergiesDislikes.AddAllergies;
 import com.kampen.riksSe.leader.activity.fragments.account.profile.AddAllergiesDislikes.AddAllergiesV3;
 import com.kampen.riksSe.leader.activity.fragments.account.profile.ContestantScheduledLiveVideoCall.ContestantSchduledLiveVideoCallActivity;
-import com.kampen.riksSe.leader.activity.fragments.account.profile.LiveVideoCall.LiveVideoCall;
 import com.kampen.riksSe.leader.activity.fragments.chat.ChatActivity;
 
 import com.kampen.riksSe.leader.activity.fragments.home.addactivity.ActivityFragment;
 import com.kampen.riksSe.leader.activity.fragments.home.addactivity.model.V3_Model.ActivityDaily;
 import com.kampen.riksSe.leader.activity.fragments.home.addactivity.weekly.daily.StepCounter.StepCountingService;
-import com.kampen.riksSe.leader.activity.fragments.home.nutrition.NutritionNewUIMealActivity;
 import com.kampen.riksSe.leader.activity.fragments.map.tracking.GPS_Service;
 import com.kampen.riksSe.login.LoginActivity;
 import com.kampen.riksSe.user.model.Realm_User;
@@ -62,8 +51,6 @@ import com.kampen.riksSe.utils.Constants;
 import com.kampen.riksSe.utils.Custom_Progress_Module.ProgressManager;
 import com.kampen.riksSe.utils.SaveSharedPreference;
 import com.nex3z.notificationbadge.NotificationBadge;
-import com.squareup.picasso.Callback;
-import com.squareup.picasso.Picasso;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -73,7 +60,6 @@ import io.realm.Realm;
 
 import static com.kampen.riksSe.api.remote_api.APIUrl.BASE_PROD_URL;
 import static com.kampen.riksSe.api.remote_api.APIUrl.BASE_TEST_URL;
-import static com.kampen.riksSe.api.remote_api.APIUrl.BASE_URL;
 import static com.kampen.riksSe.api.remote_api.APIUrl.context;
 import static com.kampen.riksSe.utils.UtilityTz.convertStaticTimeToUTC;
 import static com.kampen.riksSe.utils.UtilityTz.convertUTCToLocalTime;

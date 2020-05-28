@@ -64,7 +64,6 @@ public class ContestantScheduledLiveVideoCallActivityPresenter implements Contes
             Log.i("TrainerSchduleExp",e.toString());
         }
 
-
     }
 
     @Override

@@ -5,29 +5,24 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
-import android.Manifest;
 import android.annotation.SuppressLint;
 import android.content.Context;
-import android.content.pm.PackageManager;
 import android.media.AudioAttributes;
 import android.media.AudioFocusRequest;
 import android.media.AudioManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.CountDownTimer;
-import android.util.Log;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.kampen.riksSe.R;
 import com.kampen.riksSe.data_manager.Repository;
-import com.kampen.riksSe.login.ModelsV3.UserRoles;
+import com.kampen.riksSe.leader.activity.fragments.account.profile.LiveVideoCall.ModelV3.LiveVideoCallToken;
 import com.kampen.riksSe.user.model.Realm_User;
 import com.kampen.riksSe.utils.ContestWeekDayTimeModel;
 import com.kampen.riksSe.utils.SaveSharedPreference;
@@ -57,11 +52,10 @@ import java.util.Collections;
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
-import static com.kampen.riksSe.utils.Constants.DATE_FORMAT;
 import static com.kampen.riksSe.utils.Constants.DATE_TIME_FORMAT;
 import static com.kampen.riksSe.utils.UtilityTz.CompititionStartDateAndTimePopDaysHoursMinutes;
 
-public class LiveVideoCall extends AppCompatActivity /*implements View.OnTouchListener*/ {
+public class LiveVideoCallActivity extends AppCompatActivity implements LiveVideoCallActivityContract.View {
 
     Context mContext;
     Room room;
@@ -93,13 +87,14 @@ public class LiveVideoCall extends AppCompatActivity /*implements View.OnTouchLi
     TextView mParticipetenName,mHourCounter,mMiniuteCounter,mSecondsCounter;
     ImageView mParticipetenStatus;
     CountDownTimer cdt = null;
+    LiveVideoCallActivityPresenter mLiveVideoCallActivityPresenter;
 
     @SuppressLint("ClickableViewAccessibility")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_live_video_call);
-        mContext = LiveVideoCall.this;
+        mContext = LiveVideoCallActivity.this;
         mUser = provideUserLocal(mContext);
 
         Bundle bundle = getIntent().getExtras();
@@ -134,7 +129,8 @@ public class LiveVideoCall extends AppCompatActivity /*implements View.OnTouchLi
         /*
          * Needed for setting/abandoning audio focus during call
          */
-
+        mLiveVideoCallActivityPresenter = new LiveVideoCallActivityPresenter(LiveVideoCallActivity.this);
+        mLiveVideoCallActivityPresenter.getLiveVideoCallAccessToken(mContext,mTrainerID,mContestantID);
         CounterContest(mSessionEndTime);
         audioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
         audioManager.setSpeakerphoneOn(true);
@@ -153,12 +149,11 @@ public class LiveVideoCall extends AppCompatActivity /*implements View.OnTouchLi
         localDataTrack =LocalDataTrack.create(mContext);
 
         //Room Name
-        RoomName = mTrainerID+"_"+mContestantID;
+        /*RoomName = mTrainerID+"_"+mContestantID;*/
         //RoomName = "Test Room";
         // Render a local video track to preview your camera
         localVideoTrack.addRenderer(mSecondaryVideoView);
-        AcessToken=TokenGentrator();
-        connectToRoom(RoomName,AcessToken);
+
         mSecondaryVideoView.bringToFront();
 
 
@@ -494,7 +489,10 @@ public class LiveVideoCall extends AppCompatActivity /*implements View.OnTouchLi
         }
 
         // To disconnect from a Room, we call:
-        room.disconnect();
+        if(room!=null){
+            room.disconnect();
+        }
+
 
         enableAudioFocus(false);
         enableVolumeControl(false);
@@ -648,6 +646,22 @@ public class LiveVideoCall extends AppCompatActivity /*implements View.OnTouchLi
         } else {
             setVolumeControlStream(getVolumeControlStream());
         }
+    }
+
+    @Override
+    public void SetLiveVideoCallTokenSucess(String mesage, LiveVideoCallToken liveVideoCallToken) {
+        AcessToken=liveVideoCallToken.getToken();
+        connectToRoom(liveVideoCallToken.getRoomName(),AcessToken);
+    }
+
+    @Override
+    public void SetLiveVideoCallTokenFiled(String mesage) {
+
+    }
+
+    @Override
+    public void setPresenter(LiveVideoCallActivityContract.Presenter mPresenter) {
+
     }
 
 /*    public boolean onTouch(View view, MotionEvent event) {

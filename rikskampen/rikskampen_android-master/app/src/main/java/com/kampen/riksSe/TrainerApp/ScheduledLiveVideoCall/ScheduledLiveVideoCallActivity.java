@@ -88,8 +88,10 @@ public class ScheduledLiveVideoCallActivity extends AppCompatActivity implements
      /*       Intent i = new Intent(mContext, ContestantSchduledLiveVideoCallActivity.class);
             startActivity(i);*/
         }
-
+        SimpleDateFormat sdf = new SimpleDateFormat(Constants.DATE_FORMAT);
+        String currentDate = sdf.format(new Date());
         scheduledLiveVideoCallActivityPresenter.GetTrainerSchdule(mContext);
+        scheduledLiveVideoCallActivityPresenter.GetTrainerSelectedSchdule(mContext,currentDate);
 
 
         Calendar startDate = Calendar.getInstance();
@@ -115,13 +117,15 @@ public class ScheduledLiveVideoCallActivity extends AppCompatActivity implements
             public void onDateSelected(Calendar date, int position) {
                 //do something
                 //  Toast.makeText(mContext, , Toast.LENGTH_SHORT).show();
-                List<ScheduledLiveVideoCall> scheduledLiveVideoCallList=new ArrayList();
+               /* List<ScheduledLiveVideoCall> scheduledLiveVideoCallList=new ArrayList();*/
                 SimpleDateFormat sdf = new SimpleDateFormat(Constants.DATE_FORMAT);
                 String SelectedDateStr = sdf.format(date.getTime());
                 String currentDate = sdf.format(new Date());
                 Boolean CurrentDateStatus =false;
                 GlobaleSelectedDate =SelectedDateStr;
-                if(SelectedDateStr.equals(currentDate)){
+
+                scheduledLiveVideoCallActivityPresenter.GetTrainerSelectedSchdule(mContext,SelectedDateStr);
+               /* if(SelectedDateStr.equals(currentDate)){
                     scheduledLiveVideoCallList = scheduledLiveVideoCallActivityPresenter.GetTrainerTodaySchduleLocalDB(mContext,currentDate);
                     CurrentDateStatus=true;
                 }else{
@@ -143,7 +147,7 @@ public class ScheduledLiveVideoCallActivity extends AppCompatActivity implements
                 }else{
                     mScheduledLiveVideoCallRV.setVisibility(View.GONE);
                     NoDataView.setVisibility(View.VISIBLE);
-                }
+                }*/
             }
         });
 
@@ -179,23 +183,23 @@ public class ScheduledLiveVideoCallActivity extends AppCompatActivity implements
     }
 
     @Override
-    public void SetTrainerSchduleSucess(String mesage) {
+    public void SetTrainerSchduleSucess(String mesage,List<ScheduledLiveVideoCall> scheduledLiveVideoCallList) {
 
         //MyApplication.showSimpleSnackBarSucess(mContext,mesage);
         SimpleDateFormat sdf1 = new SimpleDateFormat(Constants.DATE_FORMAT);
         String currentDate = sdf1.format(new Date());
-        List<ScheduledLiveVideoCall> scheduledLiveVideoCallList=new ArrayList();
+        //List<ScheduledLiveVideoCall> scheduledLiveVideoCallList=new ArrayList();
         Boolean CurrentDateStatus =false;
         if(GlobaleSelectedDate!=null){
             if(GlobaleSelectedDate.equals(currentDate)){
-                scheduledLiveVideoCallList = scheduledLiveVideoCallActivityPresenter.GetTrainerTodaySchduleLocalDB(mContext,currentDate);
+                //scheduledLiveVideoCallList = scheduledLiveVideoCallActivityPresenter.GetTrainerTodaySchduleLocalDB(mContext,currentDate);
                 CurrentDateStatus=true;
             }else{
-                scheduledLiveVideoCallList = scheduledLiveVideoCallActivityPresenter.GetTrainerFutureSchduleLocalDB(mContext,GlobaleSelectedDate);
+                //scheduledLiveVideoCallList = scheduledLiveVideoCallActivityPresenter.GetTrainerFutureSchduleLocalDB(mContext,GlobaleSelectedDate);
                 CurrentDateStatus=false;
             }
         }else{
-            scheduledLiveVideoCallList = scheduledLiveVideoCallActivityPresenter.GetTrainerTodaySchduleLocalDB(mContext,currentDate);
+            //scheduledLiveVideoCallList = scheduledLiveVideoCallActivityPresenter.GetTrainerTodaySchduleLocalDB(mContext,currentDate);
             CurrentDateStatus=true;
         }
 

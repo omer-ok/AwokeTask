@@ -18,8 +18,7 @@ import com.kampen.riksSe.GlideApp;
 import com.kampen.riksSe.R;
 import com.kampen.riksSe.TrainerApp.ScheduledLiveVideoCall.ModelV3.ScheduledLiveVideoCall;
 import com.kampen.riksSe.data_manager.Repository;
-import com.kampen.riksSe.leader.activity.fragments.account.profile.ContestantScheduledLiveVideoCall.Adapter.ContestantTodayScheduledLiveVideoCallAdapter;
-import com.kampen.riksSe.leader.activity.fragments.account.profile.LiveVideoCall.LiveVideoCall;
+import com.kampen.riksSe.leader.activity.fragments.account.profile.LiveVideoCall.LiveVideoCallActivity;
 import com.kampen.riksSe.leader.activity.fragments.home.nutrition.model.newP.N_DaysDB;
 import com.kampen.riksSe.user.model.Realm_User;
 import com.kampen.riksSe.utils.ContestWeekDayTimeModel;
@@ -34,12 +33,10 @@ import java.util.concurrent.TimeUnit;
 import io.vov.vitamio.utils.Log;
 
 import static com.kampen.riksSe.utils.Constants.DATE_TIME_FORMAT;
-import static com.kampen.riksSe.utils.UtilityTz.AddTimeinStaticTimeUI;
 import static com.kampen.riksSe.utils.UtilityTz.CompititionStartDateAndTimePopDaysHoursMinutes;
 import static com.kampen.riksSe.utils.UtilityTz.convertDateTimeForUI;
 import static com.kampen.riksSe.utils.UtilityTz.convertDateTimeForUIDate;
 import static com.kampen.riksSe.utils.UtilityTz.convertDateTimeForUIDay;
-import static com.kampen.riksSe.utils.UtilityTz.convertDateTimeToTimeFormat;
 import static com.kampen.riksSe.utils.UtilityTz.convertDateTimeToTimeFormatUI;
 import static com.kampen.riksSe.utils.UtilityTz.convertUTCToLocalTime;
 
@@ -228,7 +225,7 @@ public class TrainerScheduledLiveVideoCallAdapter extends RecyclerView.Adapter<T
                     try{
                         Realm_User mUser = provideUserLocal(mContext);
                         String mScheduledSessionEndTime =convertUTCToLocalTime(mScheduledLiveVideoCallArrayList.get(position).getSessionEndsAt());
-                        Intent i =new Intent(mContext, LiveVideoCall.class);
+                        Intent i =new Intent(mContext, LiveVideoCallActivity.class);
                         i.putExtra("SessionEndTime",mScheduledSessionEndTime);
                         i.putExtra("TrainerID",mUser.getId());
                         i.putExtra("ContestantID",String.valueOf(mScheduledLiveVideoCallArrayList.get(position).getContestant().getId()));

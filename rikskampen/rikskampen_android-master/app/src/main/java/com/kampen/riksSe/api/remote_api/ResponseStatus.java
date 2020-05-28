@@ -1,10 +1,12 @@
 package com.kampen.riksSe.api.remote_api;
 
+import com.kampen.riksSe.TrainerApp.ScheduledLiveVideoCall.ModelV3.ScheduledLiveVideoCall;
 import com.kampen.riksSe.api.remote_api.V2_api_model.TruncateId;
 import com.kampen.riksSe.api.remote_api.V2_api_model.TruncateTable;
 import com.kampen.riksSe.leader.activity.fragments.account.profile.AddAllergiesDislikes.ModelNew.Alergy;
 import com.kampen.riksSe.leader.activity.fragments.account.profile.AddAllergiesDislikes.ModelsV3.AllergyResult;
 import com.kampen.riksSe.leader.activity.fragments.account.profile.ContestantScheduledLiveVideoCall.ContestantReSchduleLiveVideoCall.ConestantDaySchdule.ModelV3.SchduleSlots;
+import com.kampen.riksSe.leader.activity.fragments.account.profile.LiveVideoCall.ModelV3.LiveVideoCallToken;
 
 import java.util.List;
 
@@ -48,7 +50,18 @@ public abstract class ResponseStatus {
 
     private int mUserRoleId;
 
+    private List<ScheduledLiveVideoCall> scheduledLiveVideoCallList;
+    private LiveVideoCallToken liveVideoCallToken;
+
     List<SchduleSlots> ContestantDaySchdulesSlotsList;
+
+    public List<ScheduledLiveVideoCall> getScheduledLiveVideoCallList() {
+        return scheduledLiveVideoCallList;
+    }
+
+    public void setScheduledLiveVideoCallList(List<ScheduledLiveVideoCall> scheduledLiveVideoCallList) {
+        this.scheduledLiveVideoCallList = scheduledLiveVideoCallList;
+    }
 
     public List<SchduleSlots> getContestantDaySchdulesSlotsList() {
         return ContestantDaySchdulesSlotsList;
@@ -58,7 +71,13 @@ public abstract class ResponseStatus {
         ContestantDaySchdulesSlotsList = contestantDaySchdulesSlotsList;
     }
 
+    public LiveVideoCallToken getLiveVideoCallToken() {
+        return liveVideoCallToken;
+    }
 
+    public void setLiveVideoCallToken(LiveVideoCallToken liveVideoCallToken) {
+        this.liveVideoCallToken = liveVideoCallToken;
+    }
 
     public String getTodayStepsFromGoogleFit() {
         return TodayStepsFromGoogleFit;

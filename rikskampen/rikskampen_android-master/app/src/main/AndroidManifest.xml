@@ -77,7 +77,7 @@
             android:screenOrientation="portrait"
             android:theme="@style/AppThemeFullScreen" />
         <activity
-            android:name=".leader.activity.fragments.account.profile.LiveVideoCall.LiveVideoCall"
+            android:name=".leader.activity.fragments.account.profile.LiveVideoCall.LiveVideoCallActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppThemeFullScreen" />
         <activity

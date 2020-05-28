@@ -48,7 +48,7 @@ public class ScheduledLiveVideoCallActivityPresenter implements ScheduledLiveVid
 
                             if(mScheduledLiveVideoCallActivityView!=null && status.getCode()==HttpStatus.HTTP_OK && status.getStatus().equals(Repository.STATUS_SUCCESS))
                             {
-                                mScheduledLiveVideoCallActivityView.SetTrainerSchduleSucess(status.getMsg());
+                                //mScheduledLiveVideoCallActivityView.SetTrainerSchduleSucess(status.getMsg());
                             }
                             else
                             {
@@ -86,6 +86,36 @@ public class ScheduledLiveVideoCallActivityPresenter implements ScheduledLiveVid
                             else
                             {
                                 mScheduledLiveVideoCallActivityView.SetContestantSchduleFiled(status.getMsg());
+                            }
+                        }
+                    });
+                }
+            }
+        }catch (Exception e){
+            Log.i("TrainerSchduleExp",e.toString());
+        }
+    }
+
+    @Override
+    public void GetTrainerSelectedSchdule(Context context, String Date) {
+        try {
+            Realm_User user = provideUserLocal(context);
+            if (user != null) {
+                if (user.getToken() != null) {
+                    String token = "bearer " + user.getToken();
+
+                    Repository.getTrainerSelectedDateSchdules(token,user.getId(),Date,new ResponseStatus() {
+                        @Override
+                        public void onResult(ResponseStatus status) {
+
+
+                            if(mScheduledLiveVideoCallActivityView!=null && status.getCode()==HttpStatus.HTTP_OK && status.getStatus().equals(Repository.STATUS_SUCCESS))
+                            {
+                                mScheduledLiveVideoCallActivityView.SetTrainerSchduleSucess(status.getMsg(),status.getScheduledLiveVideoCallList());
+                            }
+                            else
+                            {
+                                mScheduledLiveVideoCallActivityView.SetTrainerSchduleFiled(status.getMsg());
                             }
                         }
                     });

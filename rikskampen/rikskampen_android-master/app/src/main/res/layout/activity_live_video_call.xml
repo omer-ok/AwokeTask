@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".leader.activity.fragments.account.profile.LiveVideoCall.LiveVideoCall">
+    tools:context=".leader.activity.fragments.account.profile.LiveVideoCall.LiveVideoCallActivity">
     <include layout="@layout/content_video" />
 
     <RelativeLayout

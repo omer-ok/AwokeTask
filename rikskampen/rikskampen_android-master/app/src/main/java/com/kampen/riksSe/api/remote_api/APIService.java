@@ -9,6 +9,7 @@ import com.kampen.riksSe.api.remote_api.V2_api_model.SyncTable;
 import com.kampen.riksSe.api.remote_api.models.NutritionModelStatus;
 import com.kampen.riksSe.leader.activity.fragments.account.profile.ContestantScheduledLiveVideoCall.ContestantReSchduleLiveVideoCall.ConestantDaySchdule.ModelV3.BookSchduleSlots;
 import com.kampen.riksSe.leader.activity.fragments.account.profile.ContestantScheduledLiveVideoCall.ContestantReSchduleLiveVideoCall.ConestantDaySchdule.ModelV3.SchduleSlots;
+import com.kampen.riksSe.leader.activity.fragments.account.profile.LiveVideoCall.ModelV3.LiveVideoCallToken;
 import com.kampen.riksSe.login.ModelsV3.LoginResultModel;
 import com.kampen.riksSe.login.ModelsV3.RemoteUser;
 import com.kampen.riksSe.api.remote_api.models.RemoteUserResult;
@@ -215,6 +216,12 @@ public interface APIService  {
 
     @GET("api/v3/schedule_slot/trainer/{id}/search?")
     Call<List<SchduleSlots>> GetContestantDaySchduleSlots(@Header("Authorization") String auth, @Path("id") String  id, @Query("schedule_date") String  date);
+
+    @GET("api/v3/user_schedule/trainer/{id}/search?")
+    Call<List<ScheduledLiveVideoCall>> GetTrainerSelectedDateSchdules(@Header("Authorization") String auth, @Path("id") String  id, @Query("schedule_date") String  date);
+
+    @GET("/public/twilio/generate_token?")
+    Call<LiveVideoCallToken> GetLiveVideoCall(@Header("Authorization") String auth, @Query("trainer_id") String  trainerId, @Query("user_id") String  userID);
 
     @POST("api/v3/user_schedule")
     Call<Object> BookSchduleSlots(@Header("Authorization") String auth, @Body BookSchduleSlots bookSchduleSlots);

@@ -13,7 +13,7 @@ public class ScheduledLiveVideoCallActivityContract {
     interface View extends BaseView<Presenter> {
 
 
-       void SetTrainerSchduleSucess(String mesage);
+       void SetTrainerSchduleSucess(String mesage,List<ScheduledLiveVideoCall> scheduledLiveVideoCallList);
        void SetTrainerSchduleFiled(String mesage);
 
         void SetContestantSchduleSucess(String mesage);
@@ -28,6 +28,7 @@ public class ScheduledLiveVideoCallActivityContract {
 
         void GetTrainerSchdule(Context context);
         void GetContestantSchdule(Context context);
+        void GetTrainerSelectedSchdule(Context context, String Date);
         List<ScheduledLiveVideoCall> GetTrainerTodaySchduleLocalDB(Context context, String Date);
         List<ScheduledLiveVideoCall> GetTrainerFutureSchduleLocalDB(Context context, String Date);
         List<ScheduledLiveVideoCall> GetContestantSchduleLocalDB(Context context,String Date);

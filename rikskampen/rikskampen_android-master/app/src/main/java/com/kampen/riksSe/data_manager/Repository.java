@@ -33,6 +33,7 @@ import com.kampen.riksSe.leader.activity.fragments.account.profile.AddAllergiesD
 import com.kampen.riksSe.leader.activity.fragments.account.profile.AddAllergiesDislikes.ModelsV3.diaries;
 import com.kampen.riksSe.leader.activity.fragments.account.profile.ContestantScheduledLiveVideoCall.ContestantReSchduleLiveVideoCall.ConestantDaySchdule.ModelV3.BookSchduleSlots;
 import com.kampen.riksSe.leader.activity.fragments.account.profile.ContestantScheduledLiveVideoCall.ContestantReSchduleLiveVideoCall.ConestantDaySchdule.ModelV3.SchduleSlots;
+import com.kampen.riksSe.leader.activity.fragments.account.profile.LiveVideoCall.ModelV3.LiveVideoCallToken;
 import com.kampen.riksSe.leader.activity.fragments.chat.Model.ChatData;
 import com.kampen.riksSe.leader.activity.fragments.chat.Model.ChatDetails;
 import com.kampen.riksSe.leader.activity.fragments.home.addactivity.adapter.adapterListModel.activityAdapterListModel;
@@ -823,6 +824,106 @@ public class Repository {
         });
 
     }
+    public  static    void   getTrainerSelectedDateSchdules(String token,String userID,String SelectedDate, ResponseStatus responseStatus)
+    {
+        APIService mWebService;
+        Realm      mLocalService;
+
+        mWebService  = ((RemoteApiService) ServiceLocator.getService(RemoteApiService.NAME)).getApiService();
+        mLocalService= ((LocalApiService)  ServiceLocator.getService(LocalApiService.NAME)).getmRealm();
+
+
+        Call<List<ScheduledLiveVideoCall>> call = mWebService.GetTrainerSelectedDateSchdules(token,userID,SelectedDate);
+
+        call.enqueue(new Callback<List<ScheduledLiveVideoCall>>() {
+            @Override
+            public void onResponse(Call<List<ScheduledLiveVideoCall>> call, Response<List<ScheduledLiveVideoCall>> response) {
+
+                List<ScheduledLiveVideoCall> obj = null;
+
+                obj = response.body();
+
+                if(response.isSuccessful()){
+
+                    responseStatus.setCode(response.code());
+                    responseStatus.setMsg(response.message());
+                    responseStatus.setStatus("success");
+                    responseStatus.setScheduledLiveVideoCallList(obj);
+                    responseStatus.onResult(responseStatus);
+
+                }else{
+
+                    responseStatus.setCode(response.code());
+                    responseStatus.setMsg(response.message());
+                    responseStatus.setStatus(STATUS_FAILED);
+                    responseStatus.onResult(responseStatus);
+                }
+
+            }
+
+            @Override
+            public void onFailure(Call<List<ScheduledLiveVideoCall>> call, Throwable t) {
+
+                t.toString();
+
+                responseStatus.setCode(API_HIT_FAILED);
+                responseStatus.setMsg(t.getMessage());
+                responseStatus.setStatus(STATUS_FAILED);
+                responseStatus.onResult(responseStatus);
+            }
+        });
+
+    }
+    public  static    void   getLiveVideoTokenSchdules(String token,String TrainerID,String userID, ResponseStatus responseStatus)
+    {
+        APIService mWebService;
+        Realm      mLocalService;
+
+        mWebService  = ((RemoteApiService) ServiceLocator.getService(RemoteApiService.NAME)).getApiService();
+        mLocalService= ((LocalApiService)  ServiceLocator.getService(LocalApiService.NAME)).getmRealm();
+
+
+        Call<LiveVideoCallToken> call = mWebService.GetLiveVideoCall(token,TrainerID,userID);
+
+        call.enqueue(new Callback<LiveVideoCallToken>() {
+            @Override
+            public void onResponse(Call<LiveVideoCallToken> call, Response<LiveVideoCallToken> response) {
+
+                LiveVideoCallToken obj = null;
+
+                obj = response.body();
+
+                if(response.isSuccessful()){
+
+                    responseStatus.setCode(response.code());
+                    responseStatus.setMsg(response.message());
+                    responseStatus.setStatus("success");
+                    responseStatus.setLiveVideoCallToken(obj);
+                    responseStatus.onResult(responseStatus);
+
+                }else{
+                    responseStatus.setCode(response.code());
+                    responseStatus.setMsg(response.message());
+                    responseStatus.setStatus(STATUS_FAILED);
+                    responseStatus.onResult(responseStatus);
+                }
+
+            }
+
+            @Override
+            public void onFailure(Call<LiveVideoCallToken> call, Throwable t) {
+
+                t.toString();
+
+                responseStatus.setCode(API_HIT_FAILED);
+                responseStatus.setMsg(t.getMessage());
+                responseStatus.setStatus(STATUS_FAILED);
+                responseStatus.onResult(responseStatus);
+            }
+        });
+
+    }
+
 
 
     public  static    void   DeleteContestantSchdules(String token,int SchduleID, ResponseStatus responseStatus)
